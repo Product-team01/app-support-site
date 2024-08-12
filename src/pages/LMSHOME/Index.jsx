@@ -260,6 +260,14 @@ const CoursesData = [
     level: 'Advanced',
     type: 'Course',
     href: '/LMS-4'
+  },
+  {
+    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png',
+    title: 'Model Gen',
+    organization: 'Document',
+    level: 'Advanced',
+    type: 'Course',
+    href: '/LMS-7'
   }
 ];
 
