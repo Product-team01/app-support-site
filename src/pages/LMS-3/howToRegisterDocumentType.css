@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+  
+  h1, h2, h3 {
+    color: var(--text-color);
+  }
+  
+  p, ul, ol {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+   /* Optional: to provide a contrast background */
+    border-radius: 8px;
+    overflow: hidden;
+   
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 600px; /* Adjust this max-width as needed */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  

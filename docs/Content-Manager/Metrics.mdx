@@ -1,0 +1,94 @@
+---
+title: 'Metrics'
+sidebar_label: Metrics
+sidebar_position: 7
+---
+
+
+
+## Metrics
+
+Metrics enable you to view all the metrics related to the performance accuracy and Confusion Matrix of catalogs.
+
+### Getting to Metrics
+
+**Navigation**
+
+1. Choose **Metrics** from the top navigation bar.
+2. Alternatively, click on the app drawer -> ‘Content Hub’ -> ‘Metrics’
+
+### Performance Accuracy
+
+Performance accuracy provides a detailed view of catalog’s performance accuracy metrics.
+
+  ![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/ctmetrics1.png 'a title')
+
+
+**Drilldown & drillup table:** When you click on any attribute or value, it will drill-down & display corresponding associated child attribute/value metrics.
+
+**Date range selector:** It contains the created date of catalog/item and allow you to switch to any date range
+
+**Taxonomy switcher:** It enables you to navigate to any level & select any attribute or value. Based on the level & attribute or value selected, the corresponding metrics will be displayed in the table
+
+**Search bar:** It enables you to search using any attribute or value name
+
+**Attribute filter:** It enables you to filter values within any column
+
+**Sort:** It enables you to sort any column in ascending/descending order
+
+**Fullscreen view:** This allows the table to be displayed in full screen view
+
+**Manage column:** This allows to select the columns that are displayed in the table.
+
+  
+
+
+### Confusion Matrix
+
+Confusion Matrix provides a detailed view of catalog’s Confusion Matrix metrics.
+
+  ![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/ctmetrics2.png 'a title')
+
+
+**Pin Rows & Columns:** When you pin, the particular row or column will be moved to the top of matrix.
+
+**Note:**
+
+* You can pin only one row & one column at a time
+* Unpinning will revert row/column back to original position
+
+**Tab Switch ‘number/percentage’ View:** It displays the data in the matrix in either absolute number or percentages
+
+**Sort Incorrect Predictions:** It enables you to sort any value based on incorrect predictions
+
+**Note:**
+
+* Both rows and columns will be sorted.
+* Correct predictions will always be available first followed by incorrect predictions in descending order
+
+**Matrix Cell:** When you click on this, it will open the context menu with these two options.
+
+* **Highlight Prediction + Reviews:** This highlights the entire row + column that this matrix cell is intersecting
+* **View Data Points:** This navigates you to the bulk view in explore with the data points filter based on the cell’s predicted & reviewed values
+
+**Reset Matrix:** This resets any action done by you & displays the default matrix for that particular taxonomy level.
+
+### Glossary
+
+| Metric Name | Description | 
+|---|---|
+| Total | # of items in the catalog |
+| Total Predictions | # of items in the catalog with one attribute-value prediction |
+| Predicted Values | # of values predicted |
+| Total Reviewed | # of items in the catalog with all attribute-value reviewed (predictions that were reviewed) |
+| Total Partially Reviewed | # of items in the catalog with at least one attribute-value reviewed (some the predictions that were reviewed) |
+|Tag Name| Name of attribute/value |
+| Total Not Reviewed | # of items in the catalog with no reviews (items with no reviews) |
+| Total Rejected | # of items in the catalog whose prediction got rejected. |
+| Reviewed Values | # of predicted values which got reviewed |
+| User Accepted | Number of predictions that were accepted by the user. System predicted 10 red colors. After review, 6 were actually red, and the user accepted all of them. |  
+| User Edited | Number of predictions or non-predictions that were edited by the user. System predicted 10 red colors. After review, the user edited 4 of them to be blue.  |
+| User Rejected | Number of predictions that were rejected by the user. | System predicted 10 red colors. After review, the user rejected 4 of them because they were not actually red. |
+| Precision | Percentage of correct predictions made by the system. System predicted 10 red colors. After review, only 6 were actually red, 4 were another color. So precision is 6/6+4 = 60%. |
+| Recall | Percentage of correct predictions made by the system against the actual value.System predicted 10 red, 5 blue colors. After review, out of 10 reds 6 are actually red, out of 5 blues 2 are red. So recall is 8/12 = 66.6%. |
+| Accuracy | Percentage of correct predictions made by the system against all predictions.System predicted 10 red, 5 blue colors. After review, out of 10 reds 6 are actually red, out of 5 blues 3 are blue. So accuracy is 9/15 = 60%. |

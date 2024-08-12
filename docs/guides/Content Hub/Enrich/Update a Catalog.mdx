@@ -1,0 +1,113 @@
+---
+title: Image Annotation 
+sidebar_label: Image Annotation 
+sidebar_position: 6
+---
+
+
+
+
+Image annotation is a crucial process in the field of computer vision and machine learning, involving the classification of specific features within an image. These annotations are used to train models to autonomously recognize or focus on certain elements within an image while disregarding irrelevant details. In the context of Vue, a platform for managing and enriching content, annotation is the process of labeling or tagging data with specific attributes or classes by selecting regions of interest. This document provides an overview of the image annotation process in Vue, including the difference between annotation and image classification, the annotation flow, and various tools and features.
+
+## Difference between Annotation and Image Classification
+
+- **Annotation:** Annotation is primarily used for object detection, which involves identifying and localizing multiple objects within an image by drawing bounding boxes around them. Annotations provide detailed information about the objects, making it possible to train models for tasks like object detection.
+
+- **Image Classification:** Image classification focuses on assigning a single label or category to an entire image. It is used to categorize images into predefined classes or categories. Image classification models are trained to recognize patterns and features in images that correspond to specific labels.
+
+In Vue, annotation is mainly used for object detection.
+
+## Getting to the Annotation Section
+
+To start the annotation process in Vue, follow these steps:
+
+1. **Navigation:**
+   - From the Vue Home Page, click on 'Content Hub' to access the Content Home Screen.
+   - Click on 'Enrich' in the navigation bar to access the project listing table.
+   - Alternatively, hover over 'Content Hub' in the navigation bar and click on 'Enrich'.
+   - Click on the 'Project Name' for which annotation is to be done.
+
+   ![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/projectlisting1b.png 'a title')
+
+2. **Feed Details:**
+   - Select the 'Feed Name' in the 'Feed Details' section for which annotation is to be done (the 'Status' column should be 'Processing Complete').
+   - Click on the 'Annotate' CTA to enter the annotation section.
+
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/data2bb.png 'a title')
+3. **Alternate Navigation:**
+   - Another way to access the annotation section is by navigating from the Cluster View by clicking on 'Annotate' CTA.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/data1bb.png 'a title')
+## Annotate Section - 'Single Content View'
+
+### Annotation Flow
+
+In the single content view, the annotation process follows these steps:
+
+1. Click on the 'Box Annotation' tool from the left toolbar and draw a bounding box (BBox) around the content.
+
+2. After drawing the BBox, the entire Taxonomy (attributes) is displayed for the user to select. Only one attribute selection is allowed per BBox at a Taxonomy level.
+
+3. For the attribute selected, one or more values can be chosen.
+
+4. Click on the 'Apply' CTA to apply the annotation.
+
+5. Content navigation is possible by clicking on the arrows to view different content in the canvas.
+
+6. Configurations made to BBox and attributes can be saved when the user clicks on 'Save & Next'.
+
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/annotationflow.png 'a title')
+
+Once the annotation is saved, it is stored in the Annotation Panel on the right side. The Annotation Panel displays the attributes made by annotation and metadata of the content.
+
+- 'Mark as Primary': Annotations marked as primary are used for short-term learning (STL) for the product. One annotation can be marked as primary for a product. If there's only one annotation, it is marked as primary by default.
+
+- 'Star Crop': A starred crop is available in the cluster view for organization. The first crop of every annotation is available by default.
+
+- STL and LTL (Long-term Learning) tools are used for learning and prediction, with the option to review and edit predictions made by the system.
+
+- Labels include 'Manually Done,' 'User Accepted,' 'System Generated,' and 'No Annotation' based on the annotation process.
+
+- Additional data points can be manually annotated to enhance the dataset.
+
+### Annotate Section - 'Grid View'
+
+In the grid view, multiple contents can be viewed and edited simultaneously. This view provides efficient operations for handling annotations.
+
+- 'Select All' CTA selects all content.
+
+- 'Edit' CTA allows the user to edit the selected content.
+
+- 'Search' enables content searching by name or ID.
+
+- 'Taxonomy Level Switcher' permits switching between attributes in different taxonomy levels.
+
+- 'Switching between bulk & single annotate views' CTA switches between bulk annotation and single annotation views.
+
+- 'Initiate Long-term Learning' CTA is used to initiate LTL.
+
+- 'Approve All' and 'Ignore All' CTAs enable bulk approval and discarding of content.
+
+- 'Checkbox' for manual selection is used to manually select content for approval or ignoring.
+
+- 'Filter by Label,' 'Sort by Confidence Score,' and 'Filter by Annotation' CTAs provide options for filtering and sorting content.
+
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/gridview.png 'a title')
+
+- The Annotation Panel in grid view displays all annotations, confidence percentages, and completion percentages.
+
+- Pagination allows the user to choose the number of contents displayed per page and navigate to different pages.
+
+## Displaying Annotated Content for Organization Flow
+
+All annotated content is available within the organization flow, which includes the cluster view and bulk edit options.
+
+## Glossary
+
+- **Hand Tool:** Allows users to move the canvas (including its content) around.
+- **Box Annotation:** Tool for drawing bounding boxes on content.
+- **Zoom-in Tool:** Enables zooming in on the content.
+- **Zoom Out Tool:** Allows users to zoom out from the content.
+- **Trigger STL:** Initiates Short Term Learning (STL) based on annotated data points (a minimum of 10 data points is required).
+- **Reset Learning:** Resets all STLs made by the system.
+
+This document provides an in-depth overview of image annotation in Vue, outlining the process, tools, and features involved in the annotation process.

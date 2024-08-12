@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+        }
+        .video-player {
+            flex: 3;
+            padding: 20px;
+        }
+        .video-player iframe {
+            width: 100%;
+            height: 500px;
+        }
+        .course-content {
+            flex: 1;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .course-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-content li {
+            margin: 10px 0;
+            cursor: pointer;
+            color: #007bff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .course-content li:hover {
+            
+        }
+        .description {
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 10px;
+        }
+        .section-header {
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .section-content {
+            display: none;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="video-player">
+        <div id="video-player-container">
+            <div id="video-placeholder"></div>
+        </div>
+        <div class="description" id="video-description">
+            <h3 id="video-title">Introduction to the course</h3>
+            <p id="video-details">Description of the current video will appear here.</p>
+        </div>
+    </div>
+    <div class="course-content">
+        <h2>Course Content</h2>
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">Section 1: Introduction (New) (<span id="section-1-status">0/1</span> | 6min)</div>
+            <div class="section-content">
+                <ul>
+                    <li id="video-0" onclick="changeVideo('dQw4w9WgXcQ', 'Introduction to the course', 'Step-by-Step Guide to Creating a Document Type for Classification Model in IDP Tool', 0, 'section-1-status')">
+                        1. Introduction
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">Section 2: Introduction to Software Documentation (New) (<span id="section-2-status">0/2</span> | 1hr)</div>
+            <div class="section-content">
+                <ul>
+                    <li id="video-1" onclick="changeVideo('MH6mxkshgJQ', 'Mastering the IDP Tool: Document Upload and Value Extraction Demo', 'Mastering the IDP Tool: Document Upload and Value Extraction Demo', 1, 'section-2-status')">
+                        2. Mastering the IDP Tool: Document Upload and Value Extraction Demo (2min)
+                    </li>
+                    <li id="video-2" onclick="changeVideo('L_jWHffIx5E', 'Technical Communications', 'Technical Communications', 2, 'section-2-status')">
+                        3. Technical Communications (6min)
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Add more sections as needed -->
+    </div>
+</div>
+
+<script>
+    var player;
+    var completedVideos = [false, false, false];
+    var currentVideoIndex = 0;
+    var currentStatusId = '';
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video-placeholder', {
+            height: '500',
+            width: '100%',
+            videoId: 'dQw4w9WgXcQ',
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    function changeVideo(videoId, title, description, index, statusId) {
+        currentVideoIndex = index;
+        currentStatusId = statusId;
+        player.loadVideoById(videoId);
+        document.getElementById('video-title').innerText = title;
+        document.getElementById('video-details').innerText = description;
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+            markAsCompleted(currentVideoIndex, currentStatusId);
+        }
+    }
+
+    function markAsCompleted(index, statusId) {
+        completedVideos[index] = true;
+        var sectionStatus = document.getElementById(statusId);
+        var totalVideos = parseInt(sectionStatus.innerText.split('/')[1]);
+        var completedCount = completedVideos.filter(Boolean).length;
+
+        // Update individual video item to indicate completion
+        document.getElementById('video-' + index).style.color = 'green';
+
+        // Count completed videos in this section
+        var sectionIndex = statusId.split('-')[1];
+        var sectionContent = document.querySelectorAll('.section-content')[sectionIndex - 1];
+        var completedVideosInSection = sectionContent.querySelectorAll('li[style*="color: green"]').length;
+
+        // Update section status
+        sectionStatus.innerText = completedVideosInSection + '/' + totalVideos;
+        console.log('Completed count: ' + completedCount + ', Section: ' + sectionIndex + ', Section completed count: ' + completedVideosInSection + '/' + totalVideos);
+    }
+
+    function toggleSection(header) {
+        var content = header.nextElementSibling;
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+
+    // Load YouTube IFrame Player API script
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+
+</body>
+</html>

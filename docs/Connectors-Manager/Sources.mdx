@@ -1,0 +1,56 @@
+---
+title: Sources
+sidebar_position: 1
+slug: /
+---
+
+
+### Introduction
+Vue empowers you to bring in data from a diverse list of sources, providing the flexibility to organize, enrich, and leverage incoming data through Platform services.
+
+### Navigation
+From the Vue Home Page:
+- Click on Connector Hub to visit the Connector Home Screen.
+- Click on Explore on the navigation bar to access the source listing table.
+- Alternatively, Hover over the Connector Hub on the navigation bar and click on sources.
+
+### Source Listing
+View the list of “All Sources” created in a table. This is where the created sources are listed in a table form to view and access easily. 
+From here you can either create a new Source or manage an existing Source by editing the configuration, checking its status or deleting the created source.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/connect1b.png 'a title')
+### Search Source
+You can search for the created Source using the Source name via search bar or use one of the suggested/recently searched keywords.
+You can find the search results populated in the table.
+
+### Edit Source
+From the Source listing table, next to each Source name, click on the edit icon under actions.
+Clicking on edit, will take you to the source details page where you can edit the details of the source created, post which you can test the connection and update the configuration. This will make edits to the source and save it on the system.
+
+
+### Delete Source
+From the Source listing table, next to each Source name, click on the Delete icon under actions.
+Clicking Delete will prompt you with an overlay modal that asks you if you want to delete the Source for sure. Upon clicking on “Delete”, the Source will be deleted from the listing.
+Deleting the Source will unlink it from all the linked features and permanently delete it & the upcoming content will not be captured in the system.
+
+### Creating a source:
+On the source listing page, upon clicking the “Create source” you will be directed to a source configuration screen where you can enter the following details.
+- Source name (Mandatory field)
+  NOTE: Source name only supports alphanumerics, space and hyphen.
+- Select source type: (Clicking on a source type will allow you to export the data from that type. For example: Clicking on the type gitlab will trigger the system to export the data from gitlab). (Mandatory field)
+  A dialog box will open once you select the “Select source type”. In this dialog, there will be a list of sources to select from.
+  There is also a search bar which can be used to search for a specific source.
+  Filters on the side based on industries will be present on the left in a grid view. 
+  Upon choosing the source type, you can now define the source.
+  NOTE: To define the source selected, you have to fill in the mandatory fields in the previous step in order to proceed to this step.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/connect2b.png 'a title')
+  The definition for the source depends on the type chosen. For each source selected, the fields to be filled and the values to be given changes. 
+  Once the above mandatory fields are filled, there will be an option called “Test connection to source” clicking on which will prompt if the connection was successful or not.
+  NOTE: Test connection helps verify the credentials & other details provided during source configuration is valid, by establishing a link to the source. Test connection must be successful in order to finish creating a source.
+
+
+
+### Sync Status:
+| Status  | Description                  |
+|---------|------------------------------|
+| Active  | The source is active and ready to be used.  |
+| Inactive | The source is inactive.  |

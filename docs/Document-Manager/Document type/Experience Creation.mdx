@@ -1,0 +1,45 @@
+---
+title: Creating a Document Type
+sidebar_label: Create a Document
+sidebar_position: 2
+---
+
+# Document Types
+
+## Introduction
+
+Need a quick and easy way to define and extract specific fields of data from large quantities of documents? Creating a custom document type enables you to define the attributes you want extracted. With one-shot learning, our AI will scale and extract the desired data from all documents classified as the same type. In this demo, we'll explore how to create a document type to build your first classification model.
+
+## Navigation
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/type1.png 'a title')
+
+To begin, navigate from the Vue Home Page. Hover over the Data Hub’s Document Manager and click on "Document Types" on the navigation bar to land on the Document Types Listing page.
+
+## Creating a Document Type
+
+### Upload
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/type7.png 'a title')
+
+
+- From the document type listing, click the ‘+new document type’ button and provide a name.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/type8.png 'a title')
+- Select a layout that best describes the structure of your document. Vue's out-of-the-box models will use this information to extract and derive a base taxonomy for you.
+- Upload your sample document by either dragging and dropping the file into the dropbox or by clicking the ‘browse’ button to select from your device.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/type9.png 'a title')
+- Once you have uploaded your document, you will be able to go to the next step to validate your taxonomy. A taxonomy is a hierarchical list of attributes that will be extracted for each document of this document type.
+
+### Taxonomy
+
+- Our AI analyzes and predicts a base taxonomy for you that you can validate, edit, add to, or delete from.
+- To view or manage your taxonomy, click the ‘Taxonomy’ tab. Here, you can add or delete attributes as needed.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/righttabledt.png 'a title')
+- To add, click the ‘Add new’ button or use the ‘annotation’ tools on the toolbar. Draw an annotation box on the preview to indicate where the attribute value can be found on the document.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/annotatedt.png 'a title')
+- To create or edit an Attribute, provide a Name, Annotation, and any additional information like its data type and related output formatting configurations.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/righttabledt.png 'a title')
+- To validate or edit the extracted values of your taxonomy, click the ‘Page Extractions’ tab. Here, you will be able to view each extracted value and the confidence level with which it was predicted.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/pageextract.png 'a title')
+- To view table extractions, check the box called ‘view extractions as overlay’ on the document preview or click the ‘view’ button to view your extracted values as a table. Here, you can also enable the ‘show crops’ toggle to view a cell by cell comparison of the document annotation crops and the extracted values.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/dt5.png 'a title')
+Once the desired taxonomy has been configured, click the ‘Register’ button. Congratulations! You have now created your very own custom classification model.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/registerdt.png 'a title')

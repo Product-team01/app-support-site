@@ -1,0 +1,144 @@
+<script>
+  function showMenu(menu) {
+    document.body.classList.remove('web', 'mobile', 'desktop', 'plugin');
+    document.body.classList.add(menu);
+  }
+
+  window.showMenu = showMenu;
+</script>
+<div class="sdks-dropdown flex max-w-lg flex-col rounded-2xl lg:min-w-[768px]">
+  <div class="flex flex-col bg-secondary-800 p-4 lg:min-h-[300px] lg:flex-row">
+    <div class="flex flex-1 flex-col gap-8 rounded-xl bg-secondary-1000 p-6">
+      
+      <a data-dropdown-sdks-menu="mobile" onfocus="document.body.setAttribute('data-sdk-menu', 'mobile')"
+        onmouseover="document.body.setAttribute('data-sdk-menu', 'mobile')"
+        class="flex cursor-pointer items-start justify-start gap-2 border-none bg-transparent text-black dark:text-white"
+        href="/Audience-Manager">
+       
+        <div class="flex flex-col items-start justify-start gap-1">
+          <div class="text-base font-semibold">Audience Hub</div>
+          <p class="mb-0 text-left text-sm text-text-400">
+            Audience Manager allows for creation of user segments (each called an audience) that can then be used both within the Vue platform (for personalized experiences) and outside - by exporting these segments to any other destination (including Marketing Automation platforms).
+          </p>
+        </div>
+      </a>
+      
+      
+      
+      <a data-dropdown-sdks-menu="web" onfocus="document.body.setAttribute('data-sdk-menu', 'web')"
+        onmouseover="document.body.setAttribute('data-sdk-menu', 'web')"
+        class="flex cursor-pointer items-start justify-start gap-2 border-none bg-transparent text-black dark:text-white"
+        href="/Digital-Experience-Manager/">
+        <div class="flex-shrink-0">
+
+        </div>
+        <div class="flex flex-col items-start justify-start gap-1">
+          <div class="text-base font-semibold">Digital Experience Manager</div>
+          <p class="mb-0 text-left text-sm text-text-400">
+            Digital Experience Manager isn’t just a tool; it’s your ally for automating workflows seamlessly in merchandising, eCommerce, and marketing operations. 
+
+          </p>
+        </div>
+      </a>
+ 
+   
+    </div>
+    <div class="flex-1 p-6">
+      <div class="flex flex-col gap-2" data-dropdown-sdks="web">
+        <div class="flex flex-1 flex-col">
+          <!-- <h3 class="!mb-0.5">Core SDK</h3>
+          <span class="none hidden text-sm font-normal lg:block">Video + Voice + Livestreaming + Chat</span> -->
+          <ul class="sdk-ul">
+            <li>
+              <a href="/Digital-Experience-Manager" class="sdk-link">
+                <img src="https://vueai.cdn.prismic.io/vueai/436f34cd-542c-4bd9-b99e-4a9aa9229071_sl-icon-a.svg?fit=max&w=64" />
+                Resources
+              </a>
+              <!-- Nested List Begins Here -->
+              <ul style="margin-left: 20px; list-style-type: circle;">
+                <!-- <li><a>Concepts</a></li> -->
+                <li><a href="/Digital-Experience-Manager">User Guides</a></li>
+                <li><a href="https://vuesandbox.vercel.app//faq/Digital%20Experience%20Manager">FAQ</a></li>
+
+              </ul>
+            </li>
+
+            <!-- <li>
+              <a href="/Document-Manager" class="sdk-link">
+                <img src="https://vueai.cdn.prismic.io/vueai/186f0d1e-e16b-4231-8aaf-8bc9616ee3a1_idp.svg?fit=max&w=48" />
+                Document Manager
+              </a>
+            </li> -->
+            <li>
+              <a href="/Digital-Experience-Manager" class="sdk-link">
+                <img src="https://vueai.cdn.prismic.io/vueai/436f34cd-542c-4bd9-b99e-4a9aa9229071_sl-icon-a.svg?fit=max&w=64" />
+                Integration
+              </a>
+              <!-- Nested List Begins Here -->
+              <ul style="margin-left: 20px; list-style-type: circle;">
+                <li><a href="/api/"">API Reference</a></li>
+                <li><a href="/Integration">SDK</a></li>
+           
+              </ul>
+            </li>
+          
+          </ul>
+        </div>
+        <div class="mt-6 flex flex-1 flex-col">
+          
+        </div>
+      </div>
+
+      <div class="flex gap-2" data-dropdown-sdks="plugin">
+        <div class="flex-1">
+          <h3>Core SDK</h3>
+
+          <ul class="list-none pl-0">
+            <li>
+              <a href="/plugin-sdk" class="sdk-link">
+                <img src="/static/landing-page/sdk-icons/js.png" />
+                Javascript
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2" data-dropdown-sdks="mobile">
+        <div class="flex flex-1 flex-col">
+          <h3 class="!mb-0.5"></h3>
+          <span class="none hidden text-sm font-normal lg:block"></span>
+          <ul class="sdk-ul">
+            <li>
+              <a href="/Audience-Manager/" class="sdk-link">
+                <img src="https://vueai.cdn.prismic.io/vueai/436f34cd-542c-4bd9-b99e-4a9aa9229071_sl-icon-a.svg?fit=max&w=64" />
+                Resources
+              </a>
+              <!-- Nested List Begins Here -->
+              <ul style="margin-left: 20px; list-style-type: circle;">
+                <!-- <li><a>Concepts</a></li> -->
+                <li><a href="/Audience-Manager/">User Guides</a></li>
+                <li><a href="https://vuesandbox.vercel.app//faq/Audience%20Manager">FAQ</a></li>
+
+              </ul>
+            </li>
+
+            <li>
+              <!-- <a href="/api/" class="sdk-link">
+                <img src="https://vueai.cdn.prismic.io/vueai/436f34cd-542c-4bd9-b99e-4a9aa9229071_sl-icon-a.svg?fit=max&w=64" />
+                Integration
+              </a> -->
+              <!-- Nested List Begins Here -->
+              <!-- <ul style="margin-left: 20px; list-style-type: circle;">
+                <li><a href="/api/"">API Reference</a></li>
+               
+           
+              </ul> -->
+            </li>
+          
+          </ul>
+        </div>
+        
+
+
+</div>

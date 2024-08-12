@@ -1,0 +1,85 @@
+---
+
+title: Connections
+sidebar_position: 3
+---
+
+
+
+### Introduction
+A connection point denotes the junction where over 200 data sources from both sources and destinations seamlessly converge, facilitating an efficient flow of data ingestion and assimilation.
+
+### Navigation
+From the Vue Home Page:
+- Click on Connector Hub to visit the Connector Home Screen.
+- Click on Explore on the navigation bar to access the connections listing table.
+- Alternatively, Hover over the Connector Hub on the navigation bar and click on Connections.
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png 'a title')
+### Connection Listing
+View the list of “All Connections” created in a table. This is where the created connections are listed for you to view and access quick actions easily. From here you can either create a new Connection or manage an existing Connection and perform actions like updating configurations of the connection, viewing information, running the connection, and deleting it.
+
+### Search Connection
+You can search for the created Connection using the Connection name via the search bar or use one of the suggested/recently searched keywords. You can find the search results populated in the table.
+
+### Edit Connection
+From the Connection listing table, next to each Connection name, click on the edit icon under actions. Clicking on edit will take you to the Connection configuration page where you can update the configuration of the Connection created. This will make edits to the connection and save it on the system.
+
+
+### View Info
+From the connection listing table, next to each connection name, click on the “Info” under actions. Clicking on info will open a modal where you can see the details of the connection run on the same page. This is a way to view the exact details of the connections and verify it in a quick manner. The details displayed in the modal are:
+- Run ID
+- Status
+- Start time
+- End time
+- Time taken in sec
+
+### Run Connection
+From the Connection listing table, next to each Connection name, click on the “Run” under actions. NOTE: Selecting this action initiates the connection process, facilitating the seamless transfer of data from specific sources to the designated destination. Clicking on Run will open a modal where the prompt will ask if you are ready to run the connection. Upon clicking on “Run,” the screen will load for a few seconds and prompt you with the message “Run created.”
+
+### Delete Connection
+From the Connection listing table, next to each Connection name, click on the Delete icon under actions. Clicking Delete will prompt the user with an overlay modal that asks you if you want to delete the Connection for sure. Upon clicking on “Delete,” the Connection will be deleted from the listing. Deleting the Connection will unlink it from all the linked features and permanently delete it, and the content from our system.
+
+The above image is the listing page of the connections.
+
+### Create Connection
+Once logged in to the Vue application, you have to navigate to the connections home/listing page. In the connection listing page, there is a “create connection” button clicking upon which will open the create connection flow. The page will be loaded where there are 3 fields to populate:
+- Connection name ( The connection name should be unique.)
+  NOTE: Connection name only supports alphanumerics, space, and hyphen.
+- Choose source (Upon clicking on this will open a modal with the list of sources for you to choose from).
+- Choose destination (Upon clicking on this will open a modal with the list of destinations for you to choose from)
+  NOTE: The sources and destinations displayed are the ones that are created.
+
+The next step is to configure connection where the user has two options:
+- Selecting frequency which has two options:
+  - Manual
+  - CRON -  upon clicking on CRON, another field will be opened where you have to define the CRON expression which is a mandatory field.
+  NOTE: Choosing CRON means that the frequency is scheduled at recurring intervals which is defined using a unique CRON expression which you have to define.
+- Detect and propagate schema changes:
+  - Ignore-  Which will not reflect source schema changes in your destination.
+  NOTE: Ignore changes will ignore the changes made on the source schema on the destination.
+
+The next step is to select a stream you want to sync. The details displayed under this are:
+
+NOTE: Here, source and destination are combined. To transfer data efficiently, sync mode for source and destination should be defined so the data is transferred in a tailored way according to the user. 
+
+- Sync- Can check and uncheck the sync displayed. (Checking and unchecking this will say if the source stream is going to be synced or not)
+- Source stream name- By default a source stream name will be displayed which cannot be edited.
+- Source sync mode:
+  - Full refresh-  Which will write new data on top of the old one upon refresh.
+- Destination sync mode:
+  - Overwrite- upon refreshing, the new data will be overwritten over the old data.
+  - Append- upon doing this, the old data will be appended with new data.
+  - Append_deduped- upon doing this, the new data will be appended on old data in an incremental manner.
+- Cursor field
+
+NOTE: The cursor field empowers users to select the specific data field where the data is appended, a functionality accessible exclusively in cases where the sync mode between the source and destination is set to "append."
+![Alt text](https://d1r1e7xjkfj7nz.cloudfront.net/connect6b.png 'a title')
+Upon configuring the above information, the user can “Create” the connection. The connection will be created and displayed on the listing screen with the relevant information.
+
+The above image shows the create connection design.
+
+### Sync Status
+| Status  | Description                                   |
+|---------|-----------------------------------------------|
+| Active  | The connection is active and ready to be used.|
+| Inactive| The connection is inactive.                   |

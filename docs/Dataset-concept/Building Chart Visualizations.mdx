@@ -1,0 +1,341 @@
+---
+title: Building Chart Visualizations
+sidebar_label: Building Chart Visualizations
+sidebar_position: 2
+---
+
+
+
+
+<head>
+  <title>Building Chart Visualizations</title>
+  <meta name="description" content="" />
+</head>
+
+Creating chart visualizations involves transforming raw data into visual formats that highlight key insights and trends. Below Documentation will walk you through building the different types of charts available in the Metrics Visualizer. 
+
+If you need help determining the right chart for your data, refer to this documentation for guidance 
+
+
+<div class="partner-details">
+  
+
+  <h2>Bar / Area / Line Chart</h2>
+  <details>
+    <summary>Configuring Your Visual</summary>
+    <p>Title: Set a concise title that describes your visual's purpose.</p>
+    <p>Dataset: Choose the dataset on which your visual will be based.</p>
+    <p>If you've uploaded a new dataset, click the refresh button to ensure it's up-to-date and available for visualization.</p>
+    <p>Visual Type: Select the type of visual you prefer: Bar, Line, or Area Chart.</p>
+    <p>Filters: Apply filters to narrow down the data for your insights. Combine multiple filters using 'and' or 'or' operators.</p>
+    <p>Operation: Choose a conditional operator (e.g., ==, >=) for your filter.</p>
+    <p>Field: Select the column to which you want to apply the filter.</p>
+    <p>Value: Enter the filter value to refine your data selection.</p>
+  </details>
+
+  <details>
+    <summary>Setting up the X-Axis and Y-Axis</summary>
+    <h3>X-Axis</h3>
+    <p>The x-axis is like a horizontal line on a graph, showing categories or time.</p>
+    <p>Field: Choose the data column to display on the X-axis.</p>
+    <p>Orientation(Bottom/Top): Decide where the X-axis labels and ticks appear</p>
+    <p>Show Axis Button: Toggle to display or hide the X-axis.</p>
+    <p>Stroke: Stroke refers to the thickness of the X-axis line</p>
+    <p>Stroke Color: Choose the color of the X-axis line.</p>
+    <p>Axis Type: Specify if the X-axis represents categories or numerical values.</p>
+    <p>Angle: Adjust the angle of the X-axis labels for better readability.</p>
+    <p>Height: Set the height of the X-axis line for visual consistency.</p>
+    <h3>Y-Axis</h3>
+    <p>The y-axis is a vertical line showing values or counts related to those categories or time.</p>
+    <p>Field: Select the data column to display on the Y-axis.</p>
+    <p>Aggregation: Choose how data on the Y-axis should be aggregated (e.g., sum, average).</p>
+    <p>Show Axis Button: Toggle to display or hide the Y-axis.</p>
+    <p>Axis Orientation: Specify whether the Y-axis labels and ticks appear on the left or right side.</p>
+    <p>Axis Color: Set the color of the Y-axis line.</p>
+    <p>Bar Color: Choose the color of bars in a bar chart on the Y-axis.</p>
+    <p>Stacked: Top of each other bar / area for compactness. (Applicable to Bar , Area Chart)</p>
+    <p>Stacked Button: Determine if bars / areas in the chart should be stacked.</p>
+    <p>Show Bar / Area / Line Button: Toggle to display or hide bars / areas in the visual.</p>
+    <p>Axis Type: Define if the Y-axis represents categories or numerical values.</p>
+    <p>Area / Line Type: Select the Line / Area type design (Basis , Bump , Natural , etc.) (Applicable to Area , Line Chart)</p>
+    <p>Add Y-axis: Allows you to add a secondary Y-axis to your visual, useful for comparing different data series with different scales on the same chart. (Can add up to 4 Axis)</p>
+  </details>
+
+  <details>
+    <summary>Customize Visual Style</summary>
+    <p>Legend: Display information about the Y-Axis and secondary Y-Axis</p>
+    <p>Show Legend: Toggle to display or hide the legend.</p>
+    <p>Position: Choose where the legend appears relative to the visual.</p>
+    <p>Alignment: Align the legend items horizontally or vertically.</p>
+    <p>Tooltip: Provides additional information when hovering over data points.</p>
+    <p>Show Tooltip: Toggle to display or hide tooltips.</p>
+    <p>Style Config: Adjust margins around the visual.</p>
+    <p>Top/Right/Left/Bottom Margin: Set the spacing between the visual and its container.</p>
+    <p>Grid: Adds a grid for better data interpretation.</p>
+    <p>Show Grid: Toggle to display or hide the grid lines.</p>
+    <p>Show Horizontal Grid: Toggle to show or hide horizontal grid lines.</p>
+    <p>Show Vertical Grid: Toggle to show or hide vertical grid lines.</p>
+  </details>
+
+  <h2>Donut Chart</h2>
+  <details>
+    <summary>Configuring Your Visual</summary>
+    <p>Title: Set a concise title that describes your visual's purpose.</p>
+    <p>Dataset: Choose the dataset on which your visual will be based.</p>
+    <p>If you've uploaded a new dataset, click the refresh button to ensure it's up-to-date and available for visualization.</p>
+    <p>Filters: Apply filters to narrow down the data for your insights. Combine multiple filters using 'and' or 'or' operators.</p>
+    <p>Operation: Choose a conditional operator (e.g., ==, >=) for your filter.</p>
+    <p>Field: Select the column to which you want to apply the filter.</p>
+    <p>Value: Enter the filter value to refine your data selection.</p>
+  </details>
+
+  <details>
+    <summary>Configuring Segment Details</summary>
+    <h3>Field</h3>
+    <p>Select the data column that will define the segments of the donut chart. Each unique value in this field will represent a distinct segment.</p>
+    <h3>Configuring Percentage Display</h3>
+    <p>Field: Select the data column to calculate the percentage for each segment.</p>
+    <p>Aggregation: Choose how to aggregate data (e.g., sum, average) for calculating percentages.</p>
+    <p>Show Button: Toggle to display or hide the percentage values on the chart.</p>
+    <p>Is Animation Active Button: Toggle to enable or disable animations for the chart.</p>
+    <p>Inner Radius: Adjust the inner radius of the donut chart, making the hole larger or smaller.</p>
+    <p>Show Label: Toggle to display or hide labels on the segments.</p>
+    <p>Show Label Line: Toggle to display or hide lines connecting labels to their respective segments.</p>
+  </details>
+
+  <details>
+    <summary>Customize Visual Style</summary>
+    <p>Legend: Display information about the Y-Axis and secondary Y-Axis</p>
+    <p>Show Legend: Toggle to display or hide the legend.</p>
+    <p>Position: Choose where the legend appears relative to the visual.</p>
+    <p>Alignment: Align the legend items horizontally or vertically.</p>
+    <p>Tooltip: Provides additional information when hovering over data points.</p>
+    <p>Show Tooltip: Toggle to display or hide tooltips.</p>
+    <p>Style Config: Adjust margins around the visual.</p>
+    <p>Top/Right/Left/Bottom Margin: Set the spacing between the visual and its container.</p>
+  </details>
+
+  <h2>Scatter Chart</h2>
+  <details>
+    <summary>Configuring Your Visual</summary>
+    <p>Title: Set a concise title that describes your visual's purpose.</p>
+    <p>Dataset: Choose the dataset on which your visual will be based.</p>
+    <p>If you've uploaded a new dataset, click the refresh button to ensure it's up-to-date and available for visualization.</p>
+    <p>Filters: Apply filters to narrow down the data for your insights. Combine multiple filters using 'and' or 'or' operators.</p>
+    <p>Operation: Choose a conditional operator (e.g., ==, >=) for your filter.</p>
+    <p>Field: Select the column to which you want to apply the filter.</p>
+    <p>Value: Enter the filter value to refine your data selection.</p>
+  </details>
+
+  <details>
+    <summary>Setting up the X-Axis and Y-Axis</summary>
+    <h3>X-Axis</h3>
+    <p>The X-axis in a scatter plot is a horizontal line that shows categories or numerical values.</p>
+    <p>Field: Choose the data column to display on the X-axis.</p>
+    <p>Orientation (Bottom/Top): Decide where the X-axis labels and ticks appear.</p>
+    <p>Show Axis Button: Toggle to display or hide the X-axis.</p>
+    <p>Stroke: Refers to the thickness of the X-axis line.</p>
+    <p>Stroke Color: Choose the color of the X-axis line.</p>
+    <p>Axis Type: Specify if the X-axis represents categories or numerical values.</p>
+    <p>Angle: Adjust the angle of the X-axis labels for better readability.</p>
+    <p>Height: Set the height of the X-axis line for visual consistency.</p>
+    <h3>Y-Axis</h3>
+    <p>The Y-axis in a scatter plot represents the numerical values or measurements plotted vertically against the X-axis.</p>
+    <p>Field: Select the data column to display on the Y-axis.</p>
+    <p>Aggregation: Choose how to aggregate data on the Y-axis (e.g., sum, average).</p>
+    <p>Orientation: Decide where the Y-axis labels and ticks appear (left or right).</p>
+    <p>Show Axis: Toggle to display or hide the Y-axis.</p>
+    <p>Axis Color: Set the color of the Y-axis line.</p>
+    <p>Plot Color: Choose the color of the scatter plot points.</p>
+    <p>Axis Type: Specify if the Y-axis represents categories or numerical values.</p>
+    <p>Show Scatters: Toggle to display or hide the scatter plot points.</p>
+    <p>Show Lines: Toggle to display or hide lines connecting scatter plot points.</p>
+    <p>Plot Type: Select the type of plot design (Circle , Cross , Diamond , etc.) to display on the Y-axis.</p>
+    <p>Add Y-axis: Allows you to add a secondary Y-axis to your visual, useful for comparing different data series with different scales on the same chart. (Can add up to 4 Axis)</p>
+  </details>
+
+  <details>
+    <summary>Customize Visual Style</summary>
+    <p>Legend: Display information about the Y-Axis and secondary Y-Axis</p>
+    <p>Show Legend: Toggle to display or hide the legend.</p>
+    <p>Position: Choose where the legend appears relative to the visual.</p>
+    <p>Alignment: Align the legend items horizontally or vertically.</p>
+    <p>Tooltip: Provides additional information when hovering over data points.</p>
+    <p>Show Tooltip: Toggle to display or hide tooltips.</p>
+    <p>Style Config: Adjust margins around the visual.</p>
+    <p>Top/Right/Left/Bottom Margin: Set the spacing between the visual and its container.</p>
+    <p>Grid: Adds a grid for better data interpretation.</p>
+    <p>Show Grid: Toggle to display or hide the grid lines.</p>
+    <p>Show Horizontal Grid: Toggle to show or hide horizontal grid lines.</p>
+    <p>Show Vertical Grid: Toggle to show or hide vertical grid lines.</p>
+  </details>
+
+  <h2>Radar Chart</h2>
+  <details>
+    <summary>Configuring Your Visual</summary>
+    <p>Title: Set a concise title that describes your visual's purpose.</p>
+    <p>Dataset: Choose the dataset on which your visual will be based.</p>
+    <p>If you've uploaded a new dataset, click the refresh button to ensure it's up-to-date and available for visualization.</p>
+    <p>Filters: Apply filters to narrow down the data for your insights. Combine multiple filters using 'and' or 'or' operators.</p>
+    <p>Operation: Choose a conditional operator (e.g., ==, >=) for your filter.</p>
+    <p>Field: Select the column to which you want to apply the filter.</p>
+    <p>Value: Enter the filter value to refine your data selection.</p>
+  </details>
+
+  <details>
+    <summary>Setting up the X-Axis and Y-Axis</summary>
+    <h3>X-Axis</h3>
+    <p>The X-axis in a radar chart represents different variables or categories plotted radially around the center, showing their values relative to each other.</p>
+    <p>Field: Select the data column to define the categories or variables displayed on the X-axis of the radar chart. Each value in this field will represent a point around the radar chart's circumference.</p>
+    <h3>Y-Axis</h3>
+    <p>The Y-axis in a radar chart represents the scale or values for each category or variable plotted radially from the center of the chart.</p>
+    <p>Field: Choose the data column to display on the Y-axis of the radar chart.</p>
+    <p>Aggregation: Select how to aggregate data for each category on the Y-axis (e.g., sum, average).</p>
+    <p>Show Radar: Toggle to display or hide the radar lines connecting data points.</p>
+    <p>Radar Color: Set the color of the radar lines on the chart.</p>
+    <p>Fill Opacity: Adjust the transparency of the area filled between radar lines to indicate data values.</p>
+    <p>Add Y-axis: Allows you to add a secondary Y-axis to your visual, useful for comparing different data series with different scales on the same chart. (Can add up to 4 Axis)</p>
+  </details>
+
+  <details>
+    <summary>Customize Visual Style</summary>
+    <p>Legend: Display information about the Y-Axis and secondary Y-Axis</p>
+    <p>Show Legend: Toggle to display or hide the legend.</p>
+    <p>Position: Choose where the legend appears relative to the visual.</p>
+    <p>Alignment: Align the legend items horizontally or vertically.</p>
+    <p>Tooltip: Provides additional information when hovering over data points.</p>
+    <p>Show Tooltip: Toggle to display or hide tooltips.</p>
+    <p>Style Config: Adjust margins around the visual.</p>
+    <p>Top/Right/Left/Bottom Margin: Set the spacing between the visual and its container.</p>
+    <p>Grid: Adds a grid for better data interpretation.</p>
+    <p>Show Grid: Toggle to display or hide the grid lines.</p>
+    <p>Show Horizontal Grid: Toggle to show or hide horizontal grid lines.</p>
+    <p>Show Vertical Grid: Toggle to show or hide vertical grid lines.</p>
+  </details>
+
+  <h2>Matrix</h2>
+  <details>
+    <summary>Configuring Your Visual</summary>
+    <p>Title: Set a concise title that describes your visual's purpose.</p>
+    <p>Dataset: Choose the dataset on which your visual will be based.</p>
+    <p>If you've uploaded a new dataset, click the refresh button to ensure it's up-to-date and available for visualization.</p>
+    <p>Filters: Apply filters to narrow down the data for your insights. Combine multiple filters using 'and' or 'or' operators.</p>
+    <p>Operation: Choose a conditional operator (e.g., ==, >=) for your filter.</p>
+    <p>Field: Select the column to which you want to apply the filter.</p>
+    <p>Value: Enter the filter value to refine your data selection.</p>
+  </details>
+
+  <details>
+    <summary>Setting up the X-Axis and Y-Axis</summary>
+    <h3>X-Axis</h3>
+    <p>The X-axis in a radar chart represents categories or groups.</p>
+    <p>Field: Select the data column to display on the X-axis of the matrix visual. Each unique value in this field will represent a column in the matrix.</p>
+     <h3>Y-Axis</h3>
+    <p>The Y-axis in a radar chart represents corresponding numerical values or metrics to X-axis.</p>
+    <p>Field: Choose the data column to display on the Y-axis of the matrix visual. Each unique value in this field will represent a row in the matrix.</p>
+    <p>Aggregation Field: Select the data column to aggregate values for each cell in the matrix.</p>
+    <p>Aggregation: Choose the aggregation method (e.g., sum, average) to calculate values for each cell in the matrix.</p>
+  </details>
+
+  <details>
+    <summary>Customize Visual Style</summary>
+    <p>Legend: Display information about the Y-Axis and secondary Y-Axis</p>
+    <p>Show Legend: Toggle to display or hide the legend.</p>
+    <p>Position: Choose where the legend appears relative to the visual.</p>
+    <p>Alignment: Align the legend items horizontally or vertically.</p>
+    <p>Tooltip: Provides additional information when hovering over data points.</p>
+    <p>Show Tooltip: Toggle to display or hide tooltips.</p>
+    <p>Style Config: Adjust margins around the visual.</p>
+    <p>Top/Right/Left/Bottom Margin: Set the spacing between the visual and its container.</p>
+    <p>Grid: Adds a grid for better data interpretation.</p>
+    <p>Show Grid: Toggle to display or hide the grid lines.</p>
+    <p>Show Horizontal Grid: Toggle to show or hide horizontal grid lines.</p>
+    <p>Show Vertical Grid: Toggle to show or hide vertical grid lines.</p>
+  </details>
+</div>
+
+# Building Cards and Tables
+
+Building card and table visualizations involves crafting concise data summaries and structured information displays, facilitating quick insights and informed decision-making. These visual elements enhance data comprehension and user engagement within Metric Visualizer. 
+
+If you need help determining the right chart for your data, refer to this documentation for guidance 
+
+:point_right: Choosing the Right Visualization for Your Data
+
+
+<h1 class="partner-title">Metric Visualizer Configuration</h1>
+<div class="partner-details">
+  <h2>Infographic Cards</h2>
+  <details>
+    <summary>Configuring Your Visual</summary>
+    <p>Dataset: Choose the dataset on which your visual will be based.</p>
+    <p>If you've uploaded a new dataset, click the refresh button to ensure it's up-to-date and available for visualization.</p>
+    <p>Card Type: Select the orientation for your card: vertical or horizontal.</p>
+    <p>Title: Set a concise title that describes your visual's purpose.</p>
+    <p>Sub Title: Set a short description that describes your visual's purpose.</p>
+    <p>Icon: Customize the icon based on the data you wish to showcase on the card.</p>
+    <p>Filters: Apply filters to narrow down the data for your insights. Combine multiple filters using 'and' or 'or' operators.</p>
+    <p>Operation: Choose a conditional operator (e.g., ==, >=) for your filter.</p>
+    <p>Field: Select the column to which you want to apply the filter.</p>
+    <p>Value: Enter the filter value to refine your data selection.</p>
+  </details>
+
+  <details>
+    <summary>Set up your Data</summary>
+    <p>Field: Choose the data column to be displayed or aggregated in the infographic card.</p>
+    <p>Aggregation: Select how to aggregate the data (e.g., sum, average) for display in the infographic card.</p>
+  </details>
+
+  <details>
+    <summary>Customize Visual Style</summary>
+    <p>Content Alignment: Adjusts the alignment of text and other content within the infographic card.</p>
+    <p>Icon Alignment: Aligns icons (Number, Currency, etc.) within the infographic card for visual consistency.</p>
+  </details>
+
+  <h2>Tables</h2>
+  <details>
+    <summary>Configuring Your Visual</summary>
+    <p>Dataset: Choose the dataset on which your visual will be based.</p>
+    <p>If you've uploaded a new dataset, click the refresh button to ensure it's up-to-date and available for visualization.</p>
+    <p>Card Type: Select the orientation for your card: vertical or horizontal.</p>
+    <p>Title: Set a concise title that describes your visual's purpose.</p>
+    <p>Filters: Apply filters to narrow down the data for your insights. Combine multiple filters using 'and' or 'or' operators.</p>
+    <p>Operation: Choose a conditional operator (e.g., ==, >=) for your filter.</p>
+    <p>Field: Select the column to which you want to apply the filter.</p>
+    <p>Value: Enter the filter value to refine your data selection.</p>
+  </details>
+
+  <details>
+    <summary>Choosing the Columns</summary>
+    <p>Columns: Select the columns you want to be displayed on the visual.</p>
+  </details>
+
+  <details>
+    <summary>Customize Visual Style</summary>
+    <p>Table Type: Choose the style or format for the table, such as basic, striped, or bordered.</p>
+    <p>Fixed Columns: Specify the number of columns to keep fixed when scrolling horizontally in the table.</p>
+  </details>
+
+  <h2>Pivot Table</h2>
+  <details>
+    <summary>Configuring Your Visual</summary>
+    <p>Dataset: Choose the dataset on which your visual will be based.</p>
+    <p>If you've uploaded a new dataset, click the refresh button to ensure it's up-to-date and available for visualization.</p>
+    <p>Card Type: Select the orientation for your card: vertical or horizontal.</p>
+    <p>Title: Set a concise title that describes your visual's purpose.</p>
+    <p>Filters: Apply filters to narrow down the data for your insights. Combine multiple filters using 'and' or 'or' operators.</p>
+    <p>Operation: Choose a conditional operator (e.g., ==, >=) for your filter.</p>
+    <p>Field: Select the column to which you want to apply the filter.</p>
+    <p>Value: Enter the filter value to refine your data selection.</p>
+  </details>
+
+  <details>
+    <summary>Setting Up Pivot Table</summary>
+    <p>Rows: Organize data vertically in the pivot table based on selected criteria.</p>
+    <p>Order: Arrange columns in ascending or descending order based on selected criteria.</p>
+    <p>Columns: Arrange data horizontally in the pivot table according to specified parameters.</p>
+    <p>Order: Arrange columns in ascending or descending order based on selected criteria.</p>
+    <p>Values: Display numerical data or metrics in the pivot table cells for analysis.</p>
+    <p>Aggregation: Choose the aggregation method for the values displayed in the pivot table.</p>
+  </details>
+</div>

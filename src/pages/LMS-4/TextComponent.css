@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+
+
+:root {
+  --background: #ffffff;
+  --text-color: #212529;
+  --border-color: #dddddd;
+  --hover-bg: #f7f7f7;
+  --hover-border-left: #0056b3;
+  --hover-icon-color: #0056b3;
+  --completed-color: green;
+}
+
+[data-theme='dark'] {
+  --background: #4c4d4e;
+  --text-color: #ffffff;
+  --border-color: #555555;
+  --hover-bg: #404a57;
+  --hover-border-left: #1e90ff;
+  --hover-icon-color: #1e90ff;
+  --completed-color: lightgreen;
+}
+
+
+.unique-text-container {
+    margin: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Full viewport height */
+    text-align: center;
+  }
+  
+  .unique-text-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .unique-text-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .unique-text-container {
+      margin: 10px;
+    }
+  
+    .unique-text-title {
+      font-size: 24px;
+    }
+  
+    .unique-text-description {
+      font-size: 14px;
+    }
+  }
+  

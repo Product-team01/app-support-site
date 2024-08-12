@@ -1,0 +1,158 @@
+---
+title: Transform Nodes
+sidebar_label: Transform Nodes
+
+sidebar_position: 2
+---
+
+
+
+<head>
+  <title>Transform Nodes</title>
+  <meta name="description" content="" />
+</head>
+
+# Welcome to the comprehensive in-depth guide on how to use Transform Nodes in a Workflow on datasets (tables) uploaded in the platform.
+
+## Modules Covered
+- Datasets
+- Workflow Builder
+- Transform Nodes
+- SQL Operations
+
+### Sample Dataset used for Examples: Metrics.csv
+
+To upload a Dataset on the Platform, Refer to this Confluence page: [Datasets](#)
+
+For any Basic learning needed on What are Nodes, Types and General use cases of Nodes, Naming Rules, Features on a Workflow, Navigation, Deployment and Run, Refer to this Confluence page: [Node Basics](#)
+
+## What is a Transform Node?
+
+Transform nodes are essential components in data workflows, enabling us to modify and manipulate data to meet their analytical needs. They are depicted as nodes within a workflow and symbolize a step where data undergoes transformation. The transformations available can be used on datasets (tables) and are very similar to SQL operations like Filtering, Grouping, Partitioning, Aggregation, Joining, Sorting, Selecting and Dropping of specific columns.
+
+The Transform Node can be connected to other nodes in the workflow. It can take input data from previous nodes, i.e., Dataset Nodes / output from other Transformation nodes that results in a Data Sink Node, process it using the Transform Node, which in turn results in a Data Sink Node on the Workflow.
+
+## What are the Types of Transform Nodes?
+
+There are different operations available as separate transform nodes which can be combined is user-defined ways to perform any operation:
+
+**Precondition**: For any transform node, only after the dataset is linked to it, will the Warning sign disappear, and the node can be made configurable to use all the fields in the dataset.
+
+### 1. Select Node
+Similar to “SELECT” statement in SQL, this node can be used to select specific columns from a table, and rename the columns as per need.
+
+For example, using the Sample Dataset - Pivoted Metrics table, one possible approach is to select the desired column, rename it to “Orders,” and then perform a Count('*') operation to get the total number of orders.
+
+
+### 2. Group By Node
+A group-by node in a data processing node that organizes data into groups based on specified columns and applies aggregate functions to these groups. 
+
+In the Node's configuration, the Column dropdown box specifies the column(s) to group by. After grouping the data by one or more columns, the Fields dropdown consists of columns to select and aggregate, the Aggregation dropdown lets us to define the type of aggregation operation to perform on that field. Multiple aggregation types can be applied to the grouped data within a single node. The results can be viewed as sample data using the data sink node.
+
+In terms of aggregations to be performed on a specific column, the operations available are:
+
+- sum: Sum of all values in the column
+- count: Count of no. of rows in the column
+- sum_distinct: Sum of all distinct values in the column
+- count_distinct: Count of all distinct value rows in the column
+- avg: Mean / Average of all values in the column
+- min: Minimum value in all the values of the column
+- max: Maximum value in all the values of the column
+
+For example, using the Sample dataset, to obtain the Total Clicks or Sum of Clicks at the date level, select the appropriate values as shown in the image below by opening its node panel.
+
+
+
+### 3. Filter Node
+A filter node in a workflow is a component used to refine datasets by removing rows that do not meet specified criteria. This operation allows us to focus on relevant data by applying conditions to the dataset. One can configure the Filter node by defining conditions that rows must meet to be included in the output.
+
+Conditions can be based on:
+
+- **Equality/Inequality**: Selecting rows where a column value equals a certain value. This can be done using arithmetic operators like "==" or "!=" available on the "Conditional Operator" dropdown box in the UI design.
+- **Range**: Selecting rows where a column value falls within a specific range. This can be done by using arithmetic operators like ">", "<", ">=", "<=" on the "Conditional Operator" dropdown box in the UI design.
+- **Logical Operations**: Combining multiple filter conditions using AND/OR operators. Here, there are two levels of logical operations present (AND / OR can be used) as shown in JSON format of the Filter node panel. In the UI design, one can Click on "and" / "or" to choose the operation that you desire to perform.
+
+
+
+Here is the JSON config for the Filter node. The keys in consideration are:
+
+- “operator": AND/OR to combine multiple filter conditions.
+- “field": Denotes the column to be used as the filter.
+- “condition_operator": Deciding on the condition that you need to execute as mentioned above, use the necessary arithmetic operators for the column selected.
+- “value": Specify the value for the condition to satisfy, for every value in the selected column.
+
+```json
+{
+  "query_type": "filter",
+  "query_value": {
+    "operator": "or",
+    "operands": [
+      {
+        "operator": "and",
+        "operands": [
+          {
+            "field": "",
+            "condition_operator": "",
+            "value": ""
+          },
+          {
+            "field": "",
+            "condition_operator": "",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### 4. Join Node
+A join node in a data processing workflow is a component that combines rows from two or more datasets based on a related column, enabling us to merge datasets in various ways depending on your analytical needs.
+
+Here, for both the datasets that you link to the join node, the available join that can be performed:
+
+→ **Left (Left Outer)**: Includes all rows from the left dataset and the matched rows from the right dataset. Unmatched rows from the right dataset result in NULL values in the resulting dataset.
+
+→ **Right (Right Outer)**: Includes all rows from the right dataset and the matched rows from the left dataset. Unmatched rows from the left dataset result in NULL values in the resulting dataset.
+
+→ **Inner**: Includes only the rows that have matching values in both datasets. Non-matching rows are excluded from the resulting dataset.
+
+→ **Outer (Full Outer)**: Includes all rows when there is a match in either the left or right dataset. Rows without matches in either dataset result in NULL values for the columns from the dataset without the match.
+
+Here is the JSON config for the Join node. The keys in consideration are:
+
+→ `"join_type"`: Type of join that you desire to perform like "inner", "outer", "left", or "right" join. 
+
+→ `"left_dataset"`: Name of the dataset on platform that you need to access at the left side / first dataset for the join functionality.
+
+→ `"right_dataset"`: Name of the dataset on platform that you need to access at the right side / second dataset for the join functionality.
+
+→ `"left_field"`: Specify the column name in the Left Dataset, that is needed for the join condition.
+
+→ `"right_field"`: Specify the column name in the Right Dataset, that is needed for the join condition.
+
+→ `"operator"`: Deciding on the condition that you need to perform the join, use the necessary arithmetic operators for the column selected like "==", "!=", ">", "<", ">=", "<=".
+
+```json
+{
+  "query_type": "join",
+  "query_value": {
+    "join_type": "Inner",
+    "left_dataset": "Dataset1",
+    "right_dataset": "Dataset2",
+    "query": [
+      {
+        "operands": {
+          "left_field": "user_id",
+          "right_field": "user_id"
+        },
+        "operator": "=="
+      }
+    ]
+  }
+}
+```
+For any basic learning on how to Access the nodes in the workflow, Linking, Deployment and Run, refer to the Confluence Link shared at the beginning of this page!
+
+Yay! We have successfully learned all about Custom Nodes, it’s types & functionalities available on Platform based on these nodes
