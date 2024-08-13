@@ -41,7 +41,7 @@ const CatalogListingComponent = () => {
       <h3>The Product Card</h3>
       <p>The Product Card is the way to view all the content (images and metadata) about a product. A Product Card consists of:</p>
       <ul>
-        <li><strong>Primary Image:</strong> The image of the first view of the product.</li>
+        <li><strong>Primary Image:</strong> The image of the front view of the product.</li>
         <li><strong>Product ID/SKU (Primary key):</strong> This will be shown for all the products in the card.</li>
         <li>
           <strong>The Context Menu:</strong> The context menu provides access to further actions.

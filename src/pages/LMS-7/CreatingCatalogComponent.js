@@ -14,9 +14,10 @@ const CreatingCatalogComponent = () => {
       <p>To create a new catalog, navigate to Automation Hub → Model Gen Manager → Catalogs.</p>
       <div className="image-container">
         <img src={`${imageBaseUrl}LMS1.png`} alt="Navigate to Catalogs" title="Navigate to Catalogs" />
-        <img src={`${imageBaseUrl}LMS2.png`} alt="New Catalog Button" title="New Catalog Button" />
+        
       </div>
       <p>Click on the ‘New Catalog’ button.</p>
+      <img src={`${imageBaseUrl}LMS2.png`} alt="New Catalog Button" title="New Catalog Button" />
       <ul>
         <li>Choose the appropriate Catalog Segment (e.g., Apparel).</li>
         <li>Select the upload method (Bulk Upload).</li>
@@ -31,16 +32,11 @@ const CreatingCatalogComponent = () => {
       <div className="image-container">
         <img src={`${imageBaseUrl}LMS3.png`} alt="Upload Files and Configure" title="Upload Files and Configure" />
       </div>
-
-      <p>
-        Choose the Primary Key for the Catalog Fields. The Primary Key represents unique values that can help identify each product in your catalog. Typically, Primary Keys are fields like Product ID or SKU.
-      </p>
-      <p>
-        After selecting the Primary Key, proceed with defining the schema of the catalog by mapping the fields. For more details, scroll to the section on defining the schema below.
-      </p>
-      <p>
-        Click on the remove icon in the actions column to exclude any field from syncing.
-      </p>
+      <ul>
+  <li>Choose the Primary Key for the Catalog Fields. The Primary Key represents unique values that can help identify each product in your catalog. Typically, Primary Keys are fields like Product ID or SKU.</li>
+  <li>After selecting the Primary Key, proceed with defining the schema of the catalog by mapping the fields. For more details, scroll to the section on defining the schema below.</li>
+  <li>Click on the remove icon in the actions column to exclude any field from syncing.</li>
+</ul>
       <div className="image-container">
         <img src={`${imageBaseUrl}LMS4.png`} alt="Map Fields and Configure Schema" title="Map Fields and Configure Schema" />
       </div>

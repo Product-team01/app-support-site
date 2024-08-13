@@ -42,9 +42,12 @@ const ExportProcessComponent = () => {
       <p>
         Under ‘Images’, select <strong>'output_images'</strong> (Generated Images).
       </p>
+
       <div className="image-container">
         <img src={`${imageBaseUrl}LMS29.png`} alt="Exporting Images" title="Exporting Images" />
       </div>
+      <strong>Note:</strong> Images can be exported only after feed submission
+
       <p>
         Click on <strong>Export</strong>. The export process starts, and clicking the <strong>Go to Exports</strong> button at the bottom takes you to the Export listing screen where you could see the exported file in ‘Running’ status. Once it is in ‘Completed’ status, it will be available to download. Clicking the <strong>Download</strong> icon downloads the Zip file locally to your device containing the product images and metadata & styling (CSV).
       </p>
