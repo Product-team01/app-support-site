@@ -33,18 +33,14 @@ const GenerationProcessComponent = () => {
             <img src={`${imageBaseUrl}LMS22.png`} alt="Rework" title="Rework" />
           </div>
         </li>
-        <li>
-          <strong>Resolved:</strong> The products that were in ‘Rework,’ after they are processed again, are sent to this section and the resolved images are highlighted with ‘Resolved’ tags for your review.
-          <br />
-          You can approve the image or again provide feedback and reject.
-          <br />
-          If all the images are approved, the product(s) will be moved to the ‘Approved’ section.
-          <br />
-          If at least one image is rejected again, the product(s) will be moved to the ‘Rework’ section again and the same cycle goes on until all the images are approved.
-        </li>
-        <li>
-          <strong>History:</strong> Shows the previous history of Generated images sent for rework along with the comments. Click on the ‘Clock’ icon to view the history.
-        </li>
+        <li><strong>Resolved</strong> - The products that were in ‘Rework’, after they are processed again, are sent to this section and the resolved images are highlighted with ‘Resolved’ tags for your review.
+    <ul>
+      <li>You can approve the image or again provide feedback and reject.</li>
+      <li>If all the images are approved, the product(s) will be moved to ‘Approved’ section.</li>
+      <li>If at least one image is rejected again, the product(s) will be moved to ‘Rework’ section again and the same cycle goes on until all the images are approved.</li>
+      <li><strong>History</strong> - Shows the previous history of Generated images sent for rework along with the comments. Click on the ‘Clock’ icon to view the history.</li>
+    </ul>
+  </li>
         <li>
           <strong>Approved:</strong> Products having all the images approved are sent to this section.
           <div className="image-container">
