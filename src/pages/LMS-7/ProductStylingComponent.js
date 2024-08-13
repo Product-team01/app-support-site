@@ -13,7 +13,7 @@ const ProductStylingComponent = () => {
       <ul>
         <li>The products that need to be paired with the input product</li>
         <li>The model that the final generation needs to be on</li>
-        <li>Model’s style, hairstyle, and poses</li>
+        <li>Model’s footwear style, hairstyle, and poses</li>
       </ul>
 
       <h3>Pair Products</h3>
@@ -41,28 +41,24 @@ const ProductStylingComponent = () => {
       </div>
 
       <h3>Footwear, Hair, Pose</h3>
-      <p>
-        Based on the chosen model, you can select one footwear style for the model.
-      </p>
-      <div className="image-container">
-        <img src={`${imageBaseUrl}Screenshot4.png`} alt="Selecting Footwear" title="Selecting Footwear" />
-      </div>
-      <p>
-        Based on the chosen model and footwear, you can select one hairstyle for the model (if applicable).
-      </p>
-      <p>
-        Based on the chosen model, footwear, and hairstyle, you can select different poses for the model to be generated.
-      </p>
-      <div className="image-container">
-        <img src={`${imageBaseUrl}Screenshot3.png`} alt="Selecting Pose" title="Selecting Pose" />
-      </div>
+      <ul>
+  <li>Based on the chosen model, you can select one footwear style for the model.</li>
+</ul>
+<div className="image-container">
+  <img src={`${imageBaseUrl}Screenshot4.png`} alt="Selecting Footwear" title="Selecting Footwear" />
+</div>
+<ul>
+  <li>Based on the chosen model and footwear, you can select one hairstyle for the model (if applicable).</li>
+  <li>Based on the chosen model, footwear, and hairstyle, you can select different poses for the model to be generated.</li>
+</ul>
+<div className="image-container">
+  <img src={`${imageBaseUrl}Screenshot3.png`} alt="Selecting Pose" title="Selecting Pose" />
+</div>
+<ul>
+  <li>You can view the preview of the product along with the selected stylings by clicking on the ‘Preview’ button.</li>
+  <li>Click on ‘Save’ to save the styling that is done.</li>
+</ul>
 
-      <p>
-        You can view the preview of the product along with the selected stylings by clicking on the ‘Preview’ button.
-      </p>
-      <p>
-        Click on ‘Save’ to save the styling that is done.
-      </p>
       <p>
         <strong>Note:</strong> Choosing model, footwear, hairstyle, and poses are all optional. You can also specify Model, Footwear, Hair, and Poses as fields in the CSV while uploading. If specified in the CSV, those will be pre-selected here, and you can edit them if required.
       </p>

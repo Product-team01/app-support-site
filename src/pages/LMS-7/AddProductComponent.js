@@ -8,7 +8,7 @@ const AddProductComponent = () => {
     <div className="add-product-page">
       <h2>Adding New Products to a Feed</h2>
       <p>
-        New products can be added to any feed in the Draft state. To add a new product to the feed, click the ‘Add Product’ button.
+         To add a new product to the feed, click the ‘Add Product’ button.
       </p>
       <div className="image-container">
         <img src={`${imageBaseUrl}LMS16.png`} alt="Add Product Button" title="Add Product Button" />

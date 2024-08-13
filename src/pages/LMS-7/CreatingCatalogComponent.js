@@ -17,7 +17,10 @@ const CreatingCatalogComponent = () => {
         
       </div>
       <p>Click on the ‘New Catalog’ button.</p>
-      <img src={`${imageBaseUrl}LMS2.png`} alt="New Catalog Button" title="New Catalog Button" />
+      <div className="image-container">
+        <img src={`${imageBaseUrl}LMS2.png`} alt="Navigate to Catalogs" title="Navigate to Catalogs" />
+        
+      </div>
       <ul>
         <li>Choose the appropriate Catalog Segment (e.g., Apparel).</li>
         <li>Select the upload method (Bulk Upload).</li>

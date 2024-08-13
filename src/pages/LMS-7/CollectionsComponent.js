@@ -12,26 +12,22 @@ const CollectionsComponent = () => {
       </p>
 
       <h3>Adding Products to Collections</h3>
-      <p>
-        You can add products to collections by specifying 'Collections' as a field in the CSV while uploading.
-      </p>
-      <p>
-        When you select a product in the grid view/List view, in the metadata panel, you can select one or more collections that the product can be added to.
-      </p>
-      <div className="image-container">
-        <img src={`${imageBaseUrl}LMS30.png`} alt="Adding Products to Collections in Grid/List View" title="Adding Products to Collections in Grid/List View" />
-      </div>
-
-      <p>
-        In Single view, you can add the product to the collection in the metadata section. You can also add the product to a new collection by clicking on the ‘Add New Collection’ button.
-      </p>
-      <div className="image-container">
-        <img src={`${imageBaseUrl}LMS32.png`} alt="Adding Products to Collections in Single View" title="Adding Products to Collections in Single View" />
-      </div>
-
-      <p>
-        In the Grid view/List View, you can bulk select products and add them to one or more collections in the Collections option available at the top. You can also add the products to a new collection by clicking on the ‘Add New Collection’ button.
-      </p>
+      <ul>
+  <li>You can add products to collections by specifying 'Collections' as a field in the CSV while uploading.</li>
+  <li>When you select a product in the grid view/List view, in the metadata panel, you can select one or more collections that the product can be added to.</li>
+</ul>
+<div className="image-container">
+  <img src={`${imageBaseUrl}LMS30.png`} alt="Adding Products to Collections in Grid/List View" title="Adding Products to Collections in Grid/List View" />
+</div>
+<ul>
+  <li>In Single view, you can add the product to the collection in the metadata section. You can also add the product to a new collection by clicking on the ‘Add New Collection’ button.</li>
+</ul>
+<div className="image-container">
+  <img src={`${imageBaseUrl}LMS32.png`} alt="Adding Products to Collections in Single View" title="Adding Products to Collections in Single View" />
+</div>
+<ul>
+  <li>In the Grid view/List View, you can bulk select products and add them to one or more collections in the Collections option available at the top. You can also add the products to a new collection by clicking on the ‘Add New Collection’ button.</li>
+</ul>
     </div>
   );
 };

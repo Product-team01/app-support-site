@@ -23,18 +23,12 @@ const CatalogComponent = () => {
       </p>
 
       <h4>Exploring the Feed</h4>
-      <p>
-        You can update the Feed Name by clicking on the edit icon available in Feed Name.
-      </p>
-      <p>
-        You can enable the ‘Show Errors’ toggle. If there are any products that have mandatory fields missing such as Gender and Category or if products' image resolutions are not correct, they will be shown in the result.
-      </p>
-      <p>
-        Using the pagination option at the bottom, you can select how many products could be shown on the page and navigate to the next page of products on the same screen.
-      </p>
-      <p>
-        You can bulk select and export products, add products to collections, and delete products.
-      </p>
+      <ul>
+  <li>You can update the Feed Name by clicking on the edit icon available in Feed Name.</li>
+  <li>You can enable the ‘Show Errors’ toggle. If there are any products that have mandatory fields missing such as Gender and Category or if products' image resolutions are not correct, they will be shown in the result.</li>
+  <li>Using the pagination option at the bottom, you can select how many products could be shown on the page and navigate to the next page of products on the same screen.</li>
+  <li>You can bulk select and export products, add products to collections, and delete products.</li>
+</ul>
       <div className="image-container">
         <img src={`${imageBaseUrl}LMS11.png`} alt="Feed Options Image" title="Feed Options Image" />
       </div>
