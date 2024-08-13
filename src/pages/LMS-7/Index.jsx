@@ -166,7 +166,7 @@ const VideoPlayerComponent = () => {
       subsections: [
         {
           type: 'component',
-          title: 'How to create a Source?',
+          title: 'Catalogs & Feeds: Overview',
           icon: bookIcon,
           component: <CatalogComponent />
         },
@@ -272,6 +272,12 @@ const VideoPlayerComponent = () => {
       title: 'Collections',
       icon: bookIcon,
       component: <CollectionsComponent />
+    },
+    {
+      type: 'component',
+      title: 'Q & A',
+      icon: bookIcon,
+      component: < QandAComponent/>
     },
   ];
 
