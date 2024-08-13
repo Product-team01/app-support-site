@@ -40,6 +40,7 @@ import GenerationProcessComponent from './GenerationProcessComponent';
 import ModelGenManagerComponent from './ModelGenManagerComponent';
 import OnModelImageryComponent from './OnModelImageryComponent';
 import ProductStylingComponent from './ProductStylingComponent';
+import FAQL from './FAQ'
 const VideoPlayerComponent = () => {
   const [currentSection, setCurrentSection] = useState('video');
   const [isCourseContentVisible, setIsCourseContentVisible] = useState(true);
@@ -190,32 +191,7 @@ const VideoPlayerComponent = () => {
         }
       ]
     },
-    // {
-    //   type: 'component',
-    //   title: 'Destination',
-    //   icon: bookIcon,
-    //   component: null,
-    //   subsections: [
-    //     {
-    //       type: 'component',
-    //       title: 'How to create a Destination?',
-    //       icon: bookIcon,
-    //       component: <ConnectionManagerDestinationInstructions  />
-    //     },
-    //     // {
-    //     //   type: 'component',
-    //     //   title: 'Multi-page Tables',
-    //     //   icon: bookIcon,
-    //     //   component: <MultiPageTables />
-    //     // },
-    //     // {
-    //     //   type: 'component',
-    //     //   title: 'A Guide to Multi-page Table Operations',
-    //     //   icon: bookIcon,
-    //     //   component: <GuideToMultiPageTableOperations />
-    //     // }
-    //   ]
-    // },
+   
     // {
     //   type: 'component',
     //   title: 'How to Register a Document Type',
@@ -278,6 +254,32 @@ const VideoPlayerComponent = () => {
       title: 'Q & A',
       icon: bookIcon,
       component: < QandAComponent/>
+    },
+    {
+      type: 'component',
+      title: 'Resources',
+      icon: bookIcon,
+      component: null,
+      subsections: [
+        {
+          type: 'component',
+          title: 'FAQ',
+          icon: bookIcon,
+          component: <FAQL/>
+        },
+        // {
+        //   type: 'component',
+        //   title: 'Multi-page Tables',
+        //   icon: bookIcon,
+        //   component: <MultiPageTables />
+        // },
+        // {
+        //   type: 'component',
+        //   title: 'A Guide to Multi-page Table Operations',
+        //   icon: bookIcon,
+        //   component: <GuideToMultiPageTableOperations />
+        // }
+      ]
     },
   ];
 
@@ -469,10 +471,10 @@ const VideoPlayerComponent = () => {
               </div>
             ))}
             <div className="unique-section">
-              <div className="unique-section-header" onClick={() => toggleSection('resources')}>
+              {/* <div className="unique-section-header" onClick={() => toggleSection('resources')}>
                 <img src={resourcesIcon} alt="" className="content-icon" /> Resources
                 <FontAwesomeIcon icon={expandedSections.includes('resources') ? faCaretDown : faCaretRight} className="expand-icon" />
-              </div>
+              </div> */}
               {expandedSections.includes('resources') && (
                 <div className="unique-section-content">
                   <ul style={{ marginLeft: '20px' }}>
