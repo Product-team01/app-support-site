@@ -90,7 +90,7 @@
   flex: 0 0 300px;
   max-width: 270px;
   padding: 30px;
-  background: var(--background);
+ 
   color: var(--text-color);
   height: calc(100vh - 60px); /* Adjust based on header/footer height */
   border-right: 0.5px solid var(--border-color);
