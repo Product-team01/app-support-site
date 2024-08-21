@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+:root {
+  --background: #ffffff;
+  --text-color: #212529;
+  --border-color: #dddddd;
+  --hover-bg: #f7f7f7;
+  --hover-border-left: #0056b3;
+  --hover-icon-color: #0056b3;
+  --completed-color: green;
+}
+
+[data-theme='dark'] {
+  --background: #4c4d4e;
+  --text-color: #ffffff;
+  --border-color: #555555;
+  --hover-bg: #404a57;
+  --hover-border-left: #1e90ff;
+  --hover-icon-color: #1e90ff;
+  --completed-color: lightgreen;
+}
+
+
+
+  h1, h2, h3 {
+    color: var(--text-color);
+  }
+  
+  p, ul, ol {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+   /* Optional: to provide a contrast background */
+    border-radius: 8px;
+    overflow: hidden;
+   
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 600px; /* Adjust this max-width as needed */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  

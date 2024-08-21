@@ -1,5 +1,5 @@
 .unique-card {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -73,4 +73,10 @@
 .unique-button-primary:hover {
   background-color: grey;
   transform: translateX(10px);
+}
+.unique-date,
+.unique-body-content,
+.unique-body-description {
+  margin: 8px 0;
+  font-size: smaller;
 }

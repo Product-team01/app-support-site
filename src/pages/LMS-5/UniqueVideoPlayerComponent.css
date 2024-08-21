@@ -1,0 +1,339 @@
+/* Importing Nunito from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* Define CSS variables for light and dark modes */
+:root {
+  --background: #ffffff;
+  --text-color: #212529;
+  --border-color: #dddddd;
+  --hover-bg: #f7f7f7;
+  --hover-border-left: #0056b3;
+  --hover-icon-color: #0056b3;
+  --completed-color: green;
+}
+
+[data-theme='dark'] {
+  --background: #000000;
+  --text-color: #ffffff;
+  --border-color: #555555;
+  --hover-bg: #404a57;
+  --hover-border-left: #1e90ff;
+  --hover-icon-color: #1e90ff;
+  --completed-color: lightgreen;
+}
+
+.unique-container {
+  display: flex;
+  font-family: 'Nunito', Arial, sans-serif;
+  position: relative;
+}
+
+.unique-video-section {
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding: 30px;
+  transition: margin-left 0.3s ease, margin-right 0.3s ease;
+}
+
+.unique-video-section.full-width {
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 100%;
+}
+
+.unique-video-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.unique-video-description {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.unique-video-player-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unique-video-player-container iframe,
+.unique-video-player-container object,
+.unique-video-player-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.unique-image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.unique-image-container img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unique-course-content {
+  flex: 0 0 300px;
+  max-width: 270px;
+  padding: 30px;
+ 
+  color: var(--text-color);
+  height: calc(100vh - 60px); /* Adjust based on header/footer height */
+  border-right: 0.5px solid var(--border-color);
+  position: sticky;
+  top: 30px; /* Adjust based on your layout */
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.unique-course-content.hidden {
+  transform: translateX(-100%);
+}
+
+.menu-toggle-btn {
+  position: absolute;
+  top: 20%;
+  left: 200px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease, left 0.3s ease;
+}
+
+.menu-toggle-btn:hover {
+  background-color: #eaeaea;
+}
+
+.unique-section {
+  margin-bottom: 20px;
+}
+
+.unique-section-header {
+  cursor: pointer;
+  margin-bottom: 5px;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: small;
+  color: var(--text-color);
+}
+
+.unique-section-header:hover {
+  background-color: var(--hover-bg);
+  border-left: 5px solid var(--hover-border-left);
+}
+
+.unique-section-header:hover .icon {
+  color: var(--hover-icon-color);
+}
+
+.icon {
+  margin-right: 4px;
+  transition: color 0.3s ease;
+  padding-right: 10px;
+  color: var(--text-color);
+}
+
+.content-icon {
+  margin-right: 4px;
+  padding-right: 10px;
+  width: 25px;  /* Adjust the size as needed */
+  height: auto;
+}
+
+.expand-icon {
+  margin-left: auto;
+}
+
+.unique-section-content {
+  margin-left: 21px;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.unique-section-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.unique-section-content li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.unique-section-content li:hover {
+  background-color: var(--hover-bg);
+}
+
+.unique-section-content li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.unique-section-content li a:hover {
+}
+
+.completed {
+  color: var(--completed-color);
+}
+
+.active-tab {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--text-color);
+  font-size: 24px;
+  margin-bottom: 10px; /* Reduce the bottom margin */
+  margin-top: 10px; /* Add a top margin to h2 */
+}
+
+p {
+  margin-bottom: 10px; /* Reduce the bottom margin of paragraphs */
+}
+
+.content-section {
+  margin-bottom: 20px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navigation-buttons button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .unique-container {
+    flex-direction: column;
+  }
+
+  .unique-course-content {
+    max-width: 70%;
+    margin-top: 15px;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .menu-toggle-btn {
+    position: fixed;
+    top: 20%;
+    left: 255px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease, left 0.3s ease;
+  }
+
+  .no-hover .unique-section-header:hover {
+    background-color: transparent;
+    border-left: none;
+  }
+  
+  .no-hover .unique-section-header:hover .icon {
+    color: inherit;
+  }
+
+  .all-about-tables-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebar-item span {
+    margin-left: 10px;
+  }
+  
+  .sidebar-item.completed {
+    color: green;
+  }
+  
+  .sidebar-item.locked {
+    color: grey;
+    cursor: not-allowed;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+}
+
+.unique-subsection {
+  margin-left: 20px;
+}
