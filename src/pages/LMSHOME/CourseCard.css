@@ -54,7 +54,7 @@
   border: none;
   box-shadow: none;
   font-family: inherit;
-  background-color: var(--highlight-color);
+  
   font-size: 15px;
   transition: 0.25s;
   color: var(--text-color);
@@ -66,9 +66,11 @@
 
 .unique-button-primary i {
   padding-right: 4px;
+  background-color: grey;
+
 }
 
 .unique-button-primary:hover {
-  background-color: var(--hover-bg);
+  background-color: grey;
   transform: translateX(10px);
 }

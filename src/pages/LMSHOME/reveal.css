@@ -12,15 +12,10 @@
     
   }
   
-  body {
-    color: var(--text-color);
-  }
+
   
   @import url('https://fonts.googleapis.com/css?family=Roboto:700');
-  
-  p {
-    text-shadow: 0 0 7px rgba(255, 255, 255, .3), 0 0 3px rgba(255, 255, 255, .3);
-  }
+
   
   .containerreveal {
     color: var(--text-color);
