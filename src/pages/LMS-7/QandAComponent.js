@@ -377,7 +377,7 @@ const QandAComponent = ({ onComplete }) => {
   return (
     <div className="question-answer-container">
       {isQuizCompleted ? (
-        <p>Congratulations! You have completed the Q&A.</p>
+        <p> You have completed the Q&A.</p>
       ) : (
         <>
           <h1>{`Question ${currentQuestionIndex + 1}`}</h1>
