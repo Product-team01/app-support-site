@@ -40,6 +40,7 @@
     "@headlessui/react": "^1.7.14",
     "@radix-ui/react-select": "^0.1.1",
     "@stoplight/elements": "^7.7.7",
+    "canvas-confetti": "^1.9.3",
     "clsx": "^1.2.1",
     "docusaurus": "^1.14.7",
     "html2canvas": "^1.4.1",
