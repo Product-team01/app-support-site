@@ -37,11 +37,11 @@ const CourseCard = ({ image = '', title = 'Untitled', organization = 'Unknown', 
         <div className="unique-card-body">
           <p className="unique-date">{level}</p>
           <h2 className="unique-body-content">{title}</h2>
-          <p className="unique-body-content">{organization}</p>
+          
           <p className="unique-body-content">{type.toUpperCase()}</p>
           <p className="unique-body-description">{description}</p>
           <button className="unique-button unique-button-primary">
-            <i className="fa fa-chevron-right" /> Start Course
+            <i className="fa fa-chevron-right" /> Begin Module
           </button>
         </div>
       </a>

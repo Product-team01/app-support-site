@@ -79,10 +79,10 @@ const NodeTypesPage = () => {
 }`}
         </code>
       </pre>
-      <div className="image-container">
+      {/* <div className="image-container">
         <p><strong>Output:</strong></p>
         <img src={`${imageBaseUrl}Screenshot-2024-07-21-at-7.57.30-PM.png`} alt="Sample Schema Output" title="Sample Schema Output" />
-      </div>
+      </div> */}
 
       <h3>Editing Code in the VS Code Server</h3>
       <p>Access the Code Server</p>

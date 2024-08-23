@@ -44,12 +44,7 @@ const VideoPlayerComponent = () => {
       icon: bookIcon,
       component: <NewGroupComponent />,
     },
-    {
-      type: 'component',
-      title: 'Q and A',
-      icon: bookIcon,
-      component: <QandAComponent />,
-    },
+  
     {
       type: 'component',
       title: 'Nodes',

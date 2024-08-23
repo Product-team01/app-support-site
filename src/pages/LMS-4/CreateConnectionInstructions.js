@@ -6,10 +6,10 @@ const CreateConnectionInstructions = () => {
     <div className="module-overview">
       
       
-      <h3>Navigation</h3>
+      <h2>Navigation</h2>
       <p>From the home page of Enterprise AI Orchestration Platform | Vue.ai Platform, navigate to Data Hub → Connection Manager → Connections. This page is a similar listing page as we’ve seen with Sources & Destinations. Here is where we manage all our existing Connections created.</p>
 
-      <h3>Create a New Connection</h3>
+      <h2>Create a New Connection</h2>
       <p>Let’s create a Connection to bring data from our Source to the Platform (Since Vue Dataset Destination creates a Dataset in Platform), click on Create New Connection.</p>
       <p>Now this Form is going to be slightly different. Let’s name our connection & select our Source & Destination by their Names. This would generate a Connection Configuration Form that relates to:</p>
       <ul>

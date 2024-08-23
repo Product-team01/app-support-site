@@ -95,7 +95,7 @@ const CoursesData = [
   {
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/type2.png',
     title: 'Document Types',
-    organization: 'MSD',
+    
     level: 'Beginner',
     type: 'Module',
     href: '/LMS',
@@ -105,7 +105,7 @@ const CoursesData = [
   {
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/newuser1.png',
     title: 'Datasets',
-    organization: 'Document',
+  
     level: 'Beginner',
     type: 'Module',
     href: '/LMS-2',
@@ -115,7 +115,7 @@ const CoursesData = [
   {
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/newuser1.png',
     title: 'Dataset Groups',
-    organization: 'Document',
+  
     level: 'Intermediate',
     type: 'Module',
     href: '/LMS-3',
@@ -125,7 +125,7 @@ const CoursesData = [
   {
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png',
     title: 'Connections',
-    organization: 'Document',
+  
     level: 'Intermediate',
     type: 'Module',
     href: '/LMS-4',
@@ -135,7 +135,7 @@ const CoursesData = [
   {
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png',
     title: 'Model Gen Manager',
-    organization: 'Document',
+  
     level: 'Intermediate',
     type: 'Module',
     href: '/LMS-7',
@@ -145,7 +145,7 @@ const CoursesData = [
   {
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png',
     title: 'Workflow ',
-    organization: 'Document',
+   
     level: 'Intermediate',
     type: 'Module',
     href: '/LMS-5',

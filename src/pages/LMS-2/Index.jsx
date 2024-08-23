@@ -791,7 +791,7 @@ const VideoPlayerComponent = () => {
                   <ul style={{ marginLeft: '20px' }}>
                     <li style={{ fontWeight: 'bold', color: 'grey' }}>Samples</li>
                     <ul style={{ marginLeft: '20px' }}>
-                      <li><a href="https://drive.google.com/uc?export=download&id=1kgQ7QfVUCFCdIoY0mxpj6iP7h8Q8JXqi" target="_blank">Sample documents</a></li>
+                      <li><a href="https://drive.google.com/uc?export=download&id=1rEgDQIOU4l0HYRPu_bZh5EpjSr0Zf0sq" target="_blank">Sample documents</a></li>
                     </ul>
                   </ul>
                 </div>
