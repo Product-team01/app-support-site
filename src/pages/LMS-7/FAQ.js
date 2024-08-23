@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './FAQ.css';
 
 const FAQL = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
     <div className="faq-container">
       {createAccordionItem(0, 'How do I create a Catalog?', 'You can create a Catalog by clicking on the ‘Create New’ button in the Catalogs Listing screen.')}
@@ -26,14 +20,10 @@ const FAQL = () => {
   function createAccordionItem(index, question, answer) {
     return (
       <div key={index} className="faq-item">
-        <h4
-          className={`faq-question ${activeIndex === index ? 'active' : ''}`}
-          onClick={() => toggleAccordion(index)}
-        >
+        <h4 className="faq-question">
           {question}
-          <span className="arrow">{activeIndex === index ? '▼' : '►'}</span>
         </h4>
-        {activeIndex === index && <p className="faq-answer">{answer}</p>}
+        <p className="faq-answer">{answer}</p>
       </div>
     );
   }
