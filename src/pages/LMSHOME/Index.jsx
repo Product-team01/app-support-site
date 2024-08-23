@@ -93,7 +93,7 @@ import CourseCard from './CourseCard';
 
 const CoursesData = [
   {
-    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/type2.png',
+    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/imagebgl.png',
     title: 'Document Types',
     
     level: 'Beginner',
@@ -103,7 +103,7 @@ const CoursesData = [
     description: 'Introduction to Document Types, what they are, and how to create new document types'
   },
   {
-    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/newuser1.png',
+    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/imagebgl.png',
     title: 'Datasets',
   
     level: 'Beginner',
@@ -113,7 +113,7 @@ const CoursesData = [
     description: 'Introduction to Datasets, what they are, operations that are possible and how to use them'
   },
   {
-    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/newuser1.png',
+    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/imagebgl.png',
     title: 'Dataset Groups',
   
     level: 'Intermediate',
@@ -123,7 +123,7 @@ const CoursesData = [
     description: 'Introduction to Dataset Groups, what they can be used for and how to use them'
   },
   {
-    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png',
+    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/imagebgl.png',
     title: 'Connections',
   
     level: 'Intermediate',
@@ -133,7 +133,7 @@ const CoursesData = [
     description: 'Introduction to Connections, what they are, and how to create new Sources, Destinations and Connections'
   },
   {
-    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png',
+    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/imagebgl.png',
     title: 'Model Gen Manager',
   
     level: 'Advanced',
@@ -143,8 +143,8 @@ const CoursesData = [
     description: 'Introduction to Vue’s Model Gen Manager, what it is capable of and how to use it'
   },
   {
-    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png',
-    title: 'Workflow ',
+    image: 'https://d1r1e7xjkfj7nz.cloudfront.net/imagebgl.png',
+    title: 'Workflows ',
    
     level: 'Intermediate',
     type: 'Module',
