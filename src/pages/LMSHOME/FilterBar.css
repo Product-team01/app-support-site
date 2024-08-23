@@ -4,6 +4,7 @@
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 20px;
+    font: black;
   }
   
   .filter-button {
@@ -22,6 +23,6 @@
   
   .filter-button:hover {
     background-color: #007bff;
-    color: white;
+    color: rgb(149, 149, 149);
   }
   
