@@ -149,7 +149,7 @@ const CoursesData = [
     level: 'Intermediate',
     type: 'Module',
     href: '/LMS-5',
-    category: 'Document',
+    category: 'Workflow',
     description: 'Introduction to Workflows, what the basics are and how to create them'
   }
 ];
@@ -157,7 +157,7 @@ const CoursesData = [
 const Main = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
-  const categories = ['All', 'Document','Model Gen'];
+  const categories = ['All', 'Document','Model Gen', 'Work flow'];
   
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
