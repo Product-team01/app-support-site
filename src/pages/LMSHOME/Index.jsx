@@ -136,7 +136,7 @@ const CoursesData = [
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/connect5b.png',
     title: 'Model Gen Manager',
   
-    level: 'Intermediate',
+    level: 'Advanced',
     type: 'Module',
     href: '/LMS-7',
     category: 'Model Gen',
@@ -157,7 +157,7 @@ const CoursesData = [
 const Main = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
-  const categories = ['All', 'Document','Model Gen', 'Work flow'];
+  const categories = ['All', 'Document','Model Gen', 'Workflow'];
   
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);

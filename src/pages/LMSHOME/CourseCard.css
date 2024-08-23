@@ -1,4 +1,4 @@
-.unique-card {
+/* .unique-card {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -79,4 +79,116 @@
 .unique-body-description {
   margin: 8px 0;
   font-size: smaller;
+} */
+
+
+.unique-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  transition: 0.25s;
+  background-color: var(--card-background);
+  color: var(--card-text-color);
+  box-shadow: var(--box-shadow);
+}
+
+.unique-card:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow-hover);
+}
+
+.unique-card-header {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unique-card-header--title {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.unique-card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: auto; 
+ 
+
+}
+
+
+
+
+
+.unique-level-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(101, 101, 101);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  max-width: fit-content;
+  text-align: center;
+  background-color: rgba(115, 115, 115, 0); /* Removing this line to avoid any transparency */
+}
+
+.level-beginner {
+  background-color: #affcb1; /* Green for Beginner */
+}
+
+.level-intermediate {
+  background-color: #90e4f3; /* Yellow for Intermediate */
+}
+
+.level-advanced {
+  background-color: #ef918a; /* Red for Advanced */
+}
+
+
+.unique-body-content {
+  font-size: 13px;
+  line-height: 1.8;
+  text-transform: uppercase;
+
+}
+
+.unique-body-description {
+  margin: 8px 0;
+  font-size: smaller;
+}
+
+.unique-button-primary {
+  border: none;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 15px;
+  transition: 0.25s;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  box-shadow: #fff;
+}
+
+.unique-button-primary i {
+  padding-right: 4px;
+  background-color: grey;
+}
+
+.unique-button-primary:hover {
+  background-color: grey;
+  transform: translateX(10px);
 }
