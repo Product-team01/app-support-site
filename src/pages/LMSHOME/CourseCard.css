@@ -135,7 +135,7 @@
   border-radius: 15px;
   font-size: 12px;
   font-weight: bold;
-  color: rgb(101, 101, 101);
+  color: rgb(255, 255, 255);
   margin-bottom: 10px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -145,15 +145,15 @@
 }
 
 .level-beginner {
-  background-color: #affcb1; /* Green for Beginner */
+  background-color: #A7F3D0; /* Green for Beginner */
 }
 
 .level-intermediate {
-  background-color: #90e4f3; /* Yellow for Intermediate */
+  background-color: #FDE68A; /* Yellow for Intermediate */
 }
 
 .level-advanced {
-  background-color: #ef918a; /* Red for Advanced */
+  background-color: #2563EB; /* Red for Advanced */
 }
 
 
