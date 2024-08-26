@@ -98,7 +98,7 @@ const CoursesData = [
     
     level: 'Beginner',
     type: 'Module',
-    href: '/LMS',
+    href: '/Document-Types',
     category: 'Document',
     description: 'Introduction to Document Types, what they are, and how to create new document types'
   },
@@ -108,7 +108,7 @@ const CoursesData = [
   
     level: 'Beginner',
     type: 'Module',
-    href: '/LMS-2',
+    href: '/Datasets',
     category: 'Document',
     description: 'Introduction to Datasets, what they are, operations that are possible and how to use them'
   },
@@ -118,7 +118,7 @@ const CoursesData = [
   
     level: 'Intermediate',
     type: 'Module',
-    href: '/LMS-3',
+    href: '/Dataset-Groups',
     category: 'Document',
     description: 'Introduction to Dataset Groups, what they can be used for and how to use them'
   },
@@ -128,7 +128,7 @@ const CoursesData = [
   
     level: 'Intermediate',
     type: 'Module',
-    href: '/LMS-4',
+    href: '/Connections',
     category: 'Document',
     description: 'Introduction to Connections, what they are, and how to create new Sources, Destinations and Connections'
   },
@@ -138,7 +138,7 @@ const CoursesData = [
   
     level: 'Advanced',
     type: 'Module',
-    href: '/LMS-7',
+    href: '/Model-Gen-Manager',
     category: 'Model Gen',
     description: 'Introduction to Vue’s Model Gen Manager, what it is capable of and how to use it'
   },
@@ -148,7 +148,7 @@ const CoursesData = [
    
     level: 'Intermediate',
     type: 'Module',
-    href: '/LMS-5',
+    href: '/Workflows',
     category: 'Workflow',
     description: 'Introduction to Workflows, what the basics are and how to create them'
   }

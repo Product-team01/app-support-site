@@ -70,12 +70,12 @@ const VideoPlayerComponent = () => {
       icon: bookIcon,
       component: <NewGroupComponent/>
     },
-    {
-      type: 'component',
-      title: 'Q & A ',
-      icon: questionIcon,
-      component: <QandAComponent />
-    },
+    // {
+    //   type: 'component',
+    //   title: 'Q & A ',
+    //   icon: questionIcon,
+    //   component: <QandAComponent />
+    // },
   ];
 
   useEffect(() => {
