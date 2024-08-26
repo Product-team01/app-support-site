@@ -147,8 +147,6 @@
 .unique-section-header:hover {
   background-color: var(--hover-bg);
   border-left: 5px solid var(--hover-border-left);
-  --text-color: #212529;
-
 }
 
 .unique-section-header:hover .icon {

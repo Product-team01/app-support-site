@@ -1,165 +1,105 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import './UniqueVideoPlayerComponent.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight, faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 // Import your components here
-import TextComponent from './TextComponent';
-import ConnectionManagerDestinationInstructions from './ConnectionManagerDestinationInstructions';
-import WhatAreDatasetsComponent from './WhatAreDatasetsComponent';
-import WhyDatasetGroupsComponent from './WhyDatasetGroups';
-import ConnectionManagerInstructions from './ConnectionManagerInstructions';
-import NewGroupComponent from './newgroupdataset';
-import ConnectionManagerOverview from './ConnectionManagerOverview';
-import CreateConnectionInstructions from './CreateConnectionInstructions';
-import DatasetGroupsComponent from './DatasetGroups';
-import CardinalityComponent from './Cardinality';
-import TheDatasetLandingPageComponent from './ERdiagrams';
-import CreatingDatasetGroupComponent from './CreatingDatasetGroup';
-import DataAndMetadataComponent from './DatasetGroups';
-import CreatingConnectionComponent from "./CreatingConnectionComponent";
+import WorkflowBuilderOverview from './WorkflowBuilderOverview';
+import WorkflowBuilderDetails from './WorkflowBuilderDetails';
+import NewGroupComponent from './WorkflowBuilderUI';
 import QandAComponent from './QandAComponent';
-import OverviewComponent from './OverviewComponent';
-import AddProductComponent from './AddProductComponent';
-import CatalogComponent from './CatalogComponent';
-import CatalogHomeComponent from './CatalogHomeComponent';
-import CatalogListingComponent from './CatalogListingComponent';
-import CollectionsComponent from './CollectionsComponent';
-import CreatingCatalogComponent from './CreatingCatalogComponent';
-import ExportProcessComponent from './ExportProcessComponent';
-import GenerationProcessComponent from './GenerationProcessComponent';
-import ModelGenManagerComponent from './ModelGenManagerComponent';
-import OnModelImageryComponent from './OnModelImageryComponent';
-import FAQL from './FAQ';
-import ProductStylingComponent from './ProductStylingComponent';
-import FinishComponent from './FinishComponent'; // Import FinishComponent
+import TransformNodeDetails from './TransformNodeDetails';
+import NodeTypesPage from './NodeTypesPage';
+import CodeServerGuide from './CodeServerGuide';
+import CodeNodeDeploymentGuide from './CodeNodeDeploymentGuide';
+import PolycloudUsageGuide from './PolycloudUsageGuide';
 
 // Import local icons
 import bookIcon from './icons/book.png';
-import questionIcon from './icons/message-question.png';
-import videoIcon from './icons/video-square.png';
-import resourcesIcon from './icons/resources.png';
 
 const VideoPlayerComponent = () => {
   const [currentSection, setCurrentSection] = useState('component');
   const [isCourseContentVisible, setIsCourseContentVisible] = useState(true);
-  const [currentComponent, setCurrentComponent] = useState(<ModelGenManagerComponent />);
-  const [activeTab, setActiveTab] = useState('0');
+  const [currentComponent, setCurrentComponent] = useState(<WorkflowBuilderOverview />);
+  const [activeTab, setActiveTab] = useState('0'); // Default to the first item
   const [expandedSections, setExpandedSections] = useState([]);
-  const [isQandACompleted, setIsQandACompleted] = useState(false); // State to track Q&A completion
 
   const courseContents = [
     {
       type: 'component',
       title: 'Module Overview',
       icon: bookIcon,
-      component: <ModelGenManagerComponent />
+      component: <WorkflowBuilderOverview />,
     },
     {
       type: 'component',
-      title: 'Introduction to On-Model Imagery',
+      title: 'Getting Started with Workflows',
       icon: bookIcon,
-      component: <OnModelImageryComponent />,
+      component: <WorkflowBuilderDetails />,
     },
     {
       type: 'component',
-      title: 'Catalogs & Feeds',
+      title: 'Understanding the UI of Workflows',
+      icon: bookIcon,
+      component: <NewGroupComponent />,
+    },
+  
+    {
+      type: 'component',
+      title: 'Nodes',
       icon: bookIcon,
       component: null,
       subsections: [
         {
           type: 'component',
-          title: 'Catalogs & Feeds: Overview',
+          title: 'Transform Nodes',
           icon: bookIcon,
-          component: <CatalogComponent />,
-        },
-        {
-          type: 'component',
-          title: 'Creating a catalog',
-          icon: bookIcon,
-          component: <CreatingCatalogComponent />,
-        },
-        {
-          type: 'component',
-          title: 'Catalog Landing and Feeds Listing',
-          icon: bookIcon,
-          component: <CatalogHomeComponent />,
-        },
-        {
-          type: 'component',
-          title: 'Product Listing',
-          icon: bookIcon,
-          component: <CatalogListingComponent />,
+          component: <TransformNodeDetails />,
         },
       ],
     },
     {
       type: 'component',
-      title: 'Adding a new product',
+      title: 'Code Nodes',
       icon: bookIcon,
-      component: <AddProductComponent />,
-    },
-    {
-      type: 'component',
-      title: 'Styling a product',
-      icon: bookIcon,
-      component: <ProductStylingComponent />,
-    },
-    {
-      type: 'component',
-      title: 'Generation and Review',
-      icon: bookIcon,
-      component: <GenerationProcessComponent />,
-    },
-    {
-      type: 'component',
-      title: 'Export',
-      icon: bookIcon,
-      component: <ExportProcessComponent />,
-    },
-    {
-      type: 'component',
-      title: 'Collections',
-      icon: bookIcon,
-      component: <CollectionsComponent />,
-    },
-    {
-      type: 'component',
-      title: 'Q & A',
-      icon: questionIcon,
-      component: <QandAComponent onComplete={() => setIsQandACompleted(true)} />, // Pass onComplete callback
-    },
-    {
-      type: 'component',
-      title: 'Resources',
-      icon: resourcesIcon,
       component: null,
       subsections: [
         {
           type: 'component',
-          title: 'FAQ',
+          title: 'Node Types',
           icon: bookIcon,
-          component: <FAQL />,
+          component: <NodeTypesPage />,
+        },
+        {
+          type: 'component',
+          title: 'Code Server Guide',
+          icon: bookIcon,
+          component: <CodeServerGuide />,
+        },
+        {
+          type: 'component',
+          title: 'How to create a Destination?',
+          icon: bookIcon,
+          component: <CodeNodeDeploymentGuide />,
+        },
+        {
+          type: 'component',
+          title: 'Polycloud Usage Guide',
+          icon: bookIcon,
+          component: <PolycloudUsageGuide />,
         },
       ],
     },
   ];
 
-  // Conditionally add the Finish Module after Q&A is completed
-  if (isQandACompleted) {
-    courseContents.push({
-      type: 'component',
-      title: 'Finish Module',
-      icon: bookIcon,
-      component: <FinishComponent />,
-    });
-  }
-
   const loadComponent = (title, component, tabId) => {
     setCurrentSection('component');
     setCurrentComponent(component);
     setActiveTab(tabId);
+    if (window.player && window.player.stopVideo) {
+      window.player.stopVideo();
+    }
   };
 
   const toggleSection = (index) => {

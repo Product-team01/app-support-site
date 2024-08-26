@@ -136,7 +136,7 @@ const CoursesData = [
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/imagebgl.png',
     title: 'Model Gen Manager',
   
-    level: 'Advanced',
+    level: 'Intermediate',
     type: 'Module',
     href: '/Model-Gen-Manager',
     category: 'Model Gen',
@@ -146,7 +146,7 @@ const CoursesData = [
     image: 'https://d1r1e7xjkfj7nz.cloudfront.net/imagebgl.png',
     title: 'Workflows ',
    
-    level: 'Intermediate',
+    level: 'Advanced',
     type: 'Module',
     href: '/Workflows',
     category: 'Workflow',
