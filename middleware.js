@@ -1,4 +1,4 @@
-export function middleware(req) {
+export default function middleware(req) {
     // Allowed referer domain
     const allowedReferer = 'https://app.vue.ai';
     
@@ -10,7 +10,7 @@ export function middleware(req) {
         return new Response('Access Forbidden', { status: 403 });
     }
 
-    // Allow the request to proceed
+    // If the referer is valid, let the request proceed
     return new Response(null, { status: 200 });
 }
 
