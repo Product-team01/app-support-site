@@ -1,6 +1,6 @@
 export default function middleware(req) {
     // Allowed referer domain
-    const allowedReferer = 'https://app.vue.ai';
+    const allowedReferer = 'https://app.vue.ai/supportsite';
     
     // Get the referer header
     const referer = req.headers.get('referer');
