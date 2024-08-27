@@ -1,5 +1,4 @@
 // middleware.js
-import { NextResponse } from 'next/server';
 
 export function middleware(req) {
     // Allowed referer domain
@@ -10,11 +9,11 @@ export function middleware(req) {
     
     // Check if the referer is present and starts with the allowed domain
     if (!referer || !referer.startsWith(allowedReferer)) {
-        return new NextResponse('Access Forbidden', { status: 403 });
+        return new Response('Access Forbidden', { status: 403 });
     }
 
     // Allow the request to proceed
-    return NextResponse.next();
+    return new Response(null, { status: 200 });
 }
 
 // Specify paths to apply the middleware
