@@ -14,6 +14,12 @@ const FAQL = () => {
       {createAccordionItem(7, 'How many models can I choose for a primary product?', 'You can select only one model for a primary product.')}
       {createAccordionItem(8, 'When does a product go to the ‘Rework’ section?', 'When at least one comment is given for the generated image and sent to rework, the product goes to the ‘Rework’ section.')}
       {createAccordionItem(9, 'When does a product go to the \'Approved\' section?', 'When all the generated images are approved, the product goes to the \'Approved\' section.')}
+
+      {/* New FAQs from the image */}
+      {createAccordionItem(10, 'When can I export data after updating metadata/styling/product status (Pending Review/ Rework/Resolved/Approved)?', 'It will take up to 30 mins for the latest changes to get updated for exporting them. If the latest changes expected are not seen in the exported file, wait for 30 minutes and export again.')}
+      {createAccordionItem(11, 'When will the product status be indicated as error?', 'The product status will be indicated as error in the following cases:\n- When Gender, Category are not given\n- When front view image is not given for the product\n- When images have wrong resolution (Min: 1000 x 1000 pixels, Max: 5000 x 5000 pixels)\n- When the configured naming convention is not followed for image names\n- When the product ID in the CSV file is not available in the Zip file.')}
+      {createAccordionItem(12, 'When will the product not be ingested into the feed?', 'In a catalog, when products having the same product IDs are uploaded, those products will not be ingested into the system.')}
+      {createAccordionItem(13, 'I have uploaded 5 images, but only one image could be seen in the product. What could be the reason?', 'The one uploaded image that is available is correct in convention and format. Other 4 images uploaded but not available are either uploaded with wrong format or with wrong naming convention.')}
     </div>
   );
 
